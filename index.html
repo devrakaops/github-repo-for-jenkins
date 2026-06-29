@@ -1,3 +1,5354 @@
-<h1> Hello World ! </h1>
-<h1> Hello Jenkins ! </h1>
-<h1> Jenkins Pipeline basic project completed </h1>
+
+
+<!DOCTYPE html>
+<html class="style-purple-1  custom-colors-enabled  custom_fonts comps live_website unicorn-platform-website" lang="en">
+
+
+<head>
+  
+  
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="alternate" href="https://unicornplatform.com/" hreflang="en" /><link rel="alternate" href="https://de.unicornplatform.page/" hreflang="de" />
+	
+  
+    
+      <link rel="stylesheet" href="https://static-cdn.unicornplatform.com/2026-05-13.693/css/main.css">
+    
+  
+
+  
+    <script>
+      window.isJsDelayed = false;
+    </script>
+    
+      <script src="https://static-cdn.unicornplatform.com/2026-05-13.693/js/main.js" defer></script>
+    
+  
+	
+  
+    
+      <link href="https://fonts.googleapis.com/css?family=Space+Grotesk:700|Space+Grotesk:400,700&display=swap" rel="stylesheet"/><style>
+			.custom_fonts .custom-google-fonts-enabled * {
+				font-family: 'Space Grotesk', Helvetica, sans-serif;
+			}
+			.custom_fonts .custom-google-fonts-enabled h1,
+			.custom_fonts .custom-google-fonts-enabled h2,
+			.custom_fonts .custom-google-fonts-enabled h3,
+			.custom_fonts .custom-google-fonts-enabled h4,
+			.custom_fonts .custom-google-fonts-enabled h5,
+			.custom_fonts .custom-google-fonts-enabled h6{
+				font-family: 'Space Grotesk', Helvetica, serif;
+			}
+		</style>
+
+    
+  
+
+	
+		<link rel="icon" type="image/png" href="https://unicorn-images.b-cdn.net/c47f2c1b-5308-4884-bcce-7723d3e71a18?optimizer=gif" sizes="16x16" />
+	
+	<meta property="og:type" content="website">
+
+    
+        <title>Unicorn Platform 🦄  AI Website Builder for Busy Founders</title>
+        <meta property="og:title" content="Unicorn Platform 🦄  AI Website Builder for Busy Founders" />
+        <meta name="twitter:title" content="Unicorn Platform 🦄  AI Website Builder for Busy Founders" />
+    
+
+    
+        <meta name="description" content="Easy to use AI-powered, drag-and-drop website, SAAS landing, directory, and blog builder for startups, mobile apps, and SaaS. 100% no code, no design skills needed.">
+        <meta property="og:description" content="Easy to use AI-powered, drag-and-drop website, SAAS landing, directory, and blog builder for startups, mobile apps, and SaaS. 100% no code, no design skills needed."/>
+        <meta name="twitter:description" content="Easy to use AI-powered, drag-and-drop website, SAAS landing, directory, and blog builder for startups, mobile apps, and SaaS. 100% no code, no design skills needed." />
+    
+
+	
+		<meta property="og:image" content="https://unicorn-images.b-cdn.net/28a61a11-d9a4-4126-b668-3369cca19d47?optimizer=gif"/>
+		<meta name="twitter:card" content="summary_large_image">
+		<meta name="twitter:image" content="https://unicorn-images.b-cdn.net/28a61a11-d9a4-4126-b668-3369cca19d47?optimizer=gif">
+	
+
+  
+  <link href="https://unicornplatform.com/" rel="canonical"><meta name="twitter:url" content="https://unicornplatform.com/"><meta property="og:url" content="https://unicornplatform.com/">
+	
+	
+
+  
+  
+    <script>
+      window.unicornEnv = "production"
+    </script>
+  
+  
+	<script src="https://cdn.tinystats.net/scripts/capi.js" async></script>
+	<meta name="referrer" content="no-referrer-when-downgrade" />
+<meta name="google-site-verification" content="m80kVVDIzNQJWoCoADwkwd2baA8EOITtz0zNHIUfT18" />
+
+
+<meta name="wot-verification" content="2dfdc43adabb6081674f"/>
+<meta name="facebook-domain-verification" content="tj1ao640e3uxfozvukl2ovxjp0fbnx" />
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-146806185-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-146806185-2');
+</script>
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-W4NHB7C');</script>
+<!-- End Google Tag Manager -->
+
+
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W4NHB7C"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+    <!-- PostHog -->
+    <script>
+      !function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.async=!0,p.src=s.api_host+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="capture identify alias people.set people.set_once set_config register register_once unregister opt_out_capturing has_opted_out_capturing opt_in_capturing reset isFeatureEnabled onFeatureFlags getFeatureFlag getFeatureFlagPayload reloadFeatureFlags group updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures getActiveMatchingSurveys getSurveys".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+      posthog.init('phc_GY6OAd9tNJV1CnPZqe8h9fW2nHtQYJ1tSEeqBRRng6k',{api_host:'https://app.posthog.com'})
+    </script>
+    <!-- End PostHog -->
+
+<!-- start firstpromoter -->
+<!-- sets the cookie -->
+<script>(function(w){w.fpr=w.fpr||function(){w.fpr.q = w.fpr.q||[];w.fpr.q[arguments[0]=='set'?'unshift':'push'](arguments);};})(window);
+fpr("init", {cid:"ydn8r0qj"}); 
+fpr("click");
+</script>
+<script src="https://cdn.firstpromoter.com/fpr.js" async></script>
+<!-- End firstpromoter -->
+
+<!-- Start ProfitWell Retain -->
+<script id="profitwell-js" data-pw-auth="be743d0bdf3f8f401651b427929cd1e9">
+        (function(i,s,o,g,r,a,m){i[o]=i[o]||function(){(i[o].q=i[o].q||[]).push(arguments)};
+        a=s.createElement(g);m=s.getElementsByTagName(g)[0];a.async=1;a.src=r+'?auth='+
+        s.getElementById(o+'-js').getAttribute('data-pw-auth');m.parentNode.insertBefore(a,m);
+        })(window,document,'profitwell','script','https://public.profitwell.com/js/profitwell.js');
+
+        profitwell('start', {});
+</script>
+<!-- End ProfitWell Retain -->
+
+<style>
+.header-01__heading, .header-60__heading {    
+max-width: 600px;
+margin: auto auto 32px;
+}
+.header-01__text, .header-60__text {
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.title-box__text {
+    opacity: 0.9;
+    max-width: 95%;
+    line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+.nav-02__list_wrapper {
+    background-color: rgba(255,255,255,0.75);
+    backdrop-filter: saturate(180%) blur(20px);
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
+}
+}
+
+</style>
+
+
+<!-- Analytics -->
+
+<script async src="https://analytic-api.marsx.dev/script.js" data-website-id="af52aa65-8d44-4fb5-8809-5abe1ba562fa"></script>
+
+<!-- Font -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap" rel="stylesheet">
+
+<style>
+.comps.custom_fonts.live_website *{
+	font-family: "Bricolage Grotesque", sans-serif !important;
+}
+
+.comps.custom_fonts.live_website h1, 
+.comps.custom_fonts.live_website h2, 
+.comps.custom_fonts.live_website h3, 
+.comps.custom_fonts.live_website h4, 
+.comps.custom_fonts.live_website h5, 
+.comps.custom_fonts.live_website h6 {
+	font-family: "Bricolage Grotesque", sans-serif !important;
+}
+</style>
+  
+
+  
+
+  
+  
+</head>
+
+<body class="custom-google-fonts-enabled comps has-cardRadius has-cardShadow has-buttonRadius has-buttonShadow has-buttonShadow--none has-cardShadow--none " id="117-214798">
+
+    
+	
+	
+
+
+
+
+
+
+
+	<nav 
+  id="uni-navigation-bar" 
+  class="js-nav nav-02  nav-02--sticky  nav-02--sticky--white  "
+  
+  >
+		<div class="container container--large">
+			<div class="nav-02__box">
+				<div class="nav-02__logo"><a aria-label="Home" class="nav-02__link" href="/" target="_self">
+					
+            
+						<img 
+            
+              class="nav-02__logo_img" 
+              height="43"
+              alt="Logo 2"
+              
+              
+                src="https://unicorn-images.b-cdn.net/7dcabea3-9657-4d11-9487-f7444d349c9d?optimizer=gif"
+                srcset="https://unicorn-images.b-cdn.net/7dcabea3-9657-4d11-9487-f7444d349c9d?optimizer=gif&amp;width=43&amp;height=43 43w,https://unicorn-images.b-cdn.net/7dcabea3-9657-4d11-9487-f7444d349c9d?optimizer=gif&amp;width=86&amp;height=86 86w,https://unicorn-images.b-cdn.net/7dcabea3-9657-4d11-9487-f7444d349c9d?optimizer=gif&amp;width=129&amp;height=129 129w,"
+                sizes="43px"
+              
+            />
+					
+					
+            
+              <span class="content-text nav-02__logo_text ">Unicorn Platform</span>
+            
+					
+				</a></div>
+				<div class="nav-02__links js-menu">
+					<div class="nav-02__list_wrapper  ">
+						<ul class="nav-02__list nav-02__list--desktop">
+                        
+                        
+                            
+
+
+    
+
+
+                        
+							<li class="nav-02__item">
+								
+	
+<div class="buttons-set"><ul class="buttons-set__list"><li class="buttons-set__item"><a
+				 data-stripe-product-id="" data-stripe-mode="" data-successful-payment-url="" data-cancel-payment-url=""
+
+				 class="button button--accent-outline " href="https://app.unicornplatform.com/auth/join?ref=htmlrev" target="_self"   onclick="posthog.capture(&quot;click_signup_landing&quot;, {button_location:&quot;navigation_right&quot;}); $tac(&#39;conversion&#39;, {   type: &#39;CTA_CLICK&#39; });"   ><span class="button__text">Create Website</span></a></li><li class="buttons-set__item"><a
+
+				 data-stripe-product-id="" data-stripe-mode="payment" data-successful-payment-url="" data-cancel-payment-url=""
+
+				class="button button--empty  button--black-outline"
+				href="https://app.unicornplatform.com/auth/login?ref=htmlrev"
+						target="_self"   onclick="posthog.capture(&quot;click_signup_landing&quot;, {button_location:&quot;navigation_left&quot;}); $tac(&#39;conversion&#39;, {   type: &#39;CTA_CLICK&#39; });"  
+						
+		><span class="button__text">Sign in</span><span class="icon"><svg
+				        viewBox="0 0 13 10" xmlns="http://www.w3.org/2000/svg"><path
+				        d="M12.823 4.164L8.954.182a.592.592 0 0 0-.854 0 .635.635 0 0 0 0 .88l2.836 2.92H.604A.614.614 0 0 0 0 4.604c0 .344.27.622.604.622h10.332L8.1 8.146a.635.635 0 0 0 0 .88.594.594 0 0 0 .854 0l3.869-3.982a.635.635 0 0 0 0-.88z"
+				        fill-rule="nonzero" fill="#00396B"></path></svg></span></a></li><li class="buttons-set__item"><a
+
+				 data-stripe-product-id="" data-stripe-mode="payment" data-successful-payment-url="" data-cancel-payment-url=""
+
+				class="button button--empty  button--black-outline"
+				href="/pricing/"
+						target="_self"   onclick="posthog.capture(&quot;click_pricing_landing&quot;);"  
+						
+		><span class="button__text">Pricing</span><span class="icon"><svg
+				        viewBox="0 0 13 10" xmlns="http://www.w3.org/2000/svg"><path
+				        d="M12.823 4.164L8.954.182a.592.592 0 0 0-.854 0 .635.635 0 0 0 0 .88l2.836 2.92H.604A.614.614 0 0 0 0 4.604c0 .344.27.622.604.622h10.332L8.1 8.146a.635.635 0 0 0 0 .88.594.594 0 0 0 .854 0l3.869-3.982a.635.635 0 0 0 0-.88z"
+				        fill-rule="nonzero" fill="#00396B"></path></svg></span></a></li></ul></div>
+
+							</li>
+						</ul>
+						<ul class="nav-02__list nav-02__list--mobile">
+                            
+                            
+                                
+
+
+    
+
+
+                            
+							<li class="nav-02__item">
+								
+	
+<div class="buttons-set"><ul class="buttons-set__list"><li class="buttons-set__item"><a
+				 data-stripe-product-id="" data-stripe-mode="" data-successful-payment-url="" data-cancel-payment-url=""
+
+				 class="button button--accent-outline " href="https://app.unicornplatform.com/auth/join?ref=htmlrev" target="_self"   onclick="posthog.capture(&quot;click_signup_landing&quot;, {button_location:&quot;navigation_right&quot;}); $tac(&#39;conversion&#39;, {   type: &#39;CTA_CLICK&#39; });"   ><span class="button__text">Create Website</span></a></li><li class="buttons-set__item"><a
+
+				 data-stripe-product-id="" data-stripe-mode="payment" data-successful-payment-url="" data-cancel-payment-url=""
+
+				class="button button--empty  button--black-outline"
+				href="https://app.unicornplatform.com/auth/login?ref=htmlrev"
+						target="_self"   onclick="posthog.capture(&quot;click_signup_landing&quot;, {button_location:&quot;navigation_left&quot;}); $tac(&#39;conversion&#39;, {   type: &#39;CTA_CLICK&#39; });"  
+						
+		><span class="button__text">Sign in</span><span class="icon"><svg
+				        viewBox="0 0 13 10" xmlns="http://www.w3.org/2000/svg"><path
+				        d="M12.823 4.164L8.954.182a.592.592 0 0 0-.854 0 .635.635 0 0 0 0 .88l2.836 2.92H.604A.614.614 0 0 0 0 4.604c0 .344.27.622.604.622h10.332L8.1 8.146a.635.635 0 0 0 0 .88.594.594 0 0 0 .854 0l3.869-3.982a.635.635 0 0 0 0-.88z"
+				        fill-rule="nonzero" fill="#00396B"></path></svg></span></a></li><li class="buttons-set__item"><a
+
+				 data-stripe-product-id="" data-stripe-mode="payment" data-successful-payment-url="" data-cancel-payment-url=""
+
+				class="button button--empty  button--black-outline"
+				href="/pricing/"
+						target="_self"   onclick="posthog.capture(&quot;click_pricing_landing&quot;);"  
+						
+		><span class="button__text">Pricing</span><span class="icon"><svg
+				        viewBox="0 0 13 10" xmlns="http://www.w3.org/2000/svg"><path
+				        d="M12.823 4.164L8.954.182a.592.592 0 0 0-.854 0 .635.635 0 0 0 0 .88l2.836 2.92H.604A.614.614 0 0 0 0 4.604c0 .344.27.622.604.622h10.332L8.1 8.146a.635.635 0 0 0 0 .88.594.594 0 0 0 .854 0l3.869-3.982a.635.635 0 0 0 0-.88z"
+				        fill-rule="nonzero" fill="#00396B"></path></svg></span></a></li></ul></div>
+
+							</li>
+						</ul>
+					</div>
+          
+            
+              
+                
+                  <div class="nav-02__burger">
+	<button class="burger burger--black js-open-menu" type="button" title="Open menu">
+		<div class="burger__box">
+			<div class="burger__inner"></div>
+		</div>
+	</button>
+</div>
+
+                
+              
+            
+          
+				</div>
+			</div>
+		</div>
+	</nav>
+  
+    <style>
+      #uni-navigation-bar .container {
+    padding: 0 24px;
+}
+#uni-navigation-bar .container--large {
+    max-width: 2560px;
+    width: 100%;
+}
+
+#uni-navigation-bar .button {
+    border-radius: 16px;
+    padding: 16px 24px 16px;
+    min-height: 48px;
+    box-shadow: none;
+}
+
+#uni-navigation-bar .button:hover {
+    background-color: var(--primary);
+    color: white;
+}
+
+#uni-navigation-bar .button--empty {
+    padding: 16px 20px 16px;
+    color: #05072E;
+}
+
+#uni-navigation-bar .button--empty:hover {
+    padding: 16px 20px 16px;
+    color: var(--primary);
+}
+
+#uni-navigation-bar .button__text {
+    font-size: 16px;
+}
+
+#uni-navigation-bar .nav-02__logo_text {
+    font-size: 18px;
+    color: #05072E;
+}
+
+@media (max-width: 768px) {
+#uni-navigation-bar .button {
+    padding: 20px 48px 20px;
+    min-width: 220px;
+    min-height: 44px;
+    border-radius: 32px;
+    box-shadow: none;
+}
+
+#uni-navigation-bar .nav-02__list--mobile {
+    padding: 220px 15px 40px 15px;
+}
+
+#uni-navigation-bar .button__text {
+    font-size: 24px;
+}
+}
+
+html, .editor__templates_nav, .editor__components {
+  --primary-5: color-mix(in srgb, var(--primary), #0000 95%);
+  --primary-10: color-mix(in srgb, var(--primary), #0000 90%);
+  --primary-20: color-mix(in srgb, var(--primary), #0000 80%);
+  --primary-50: color-mix(in srgb, var(--primary), #0000 50%);
+  --primary-80: color-mix(in srgb, var(--primary), #0000 20%);
+
+  --secondary-5: color-mix(in srgb, var(--secondary), #0000 95%);
+  --secondary-10: color-mix(in srgb, var(--secondary), #0000 90%);
+  --secondary-20: color-mix(in srgb, var(--secondary), #0000 80%);
+  --secondary-50: color-mix(in srgb, var(--secondary), #0000 50%);
+  --secondary-80: color-mix(in srgb, var(--secondary), #0000 20%);
+
+  --accent-5: color-mix(in srgb, var(--accent), #0000 95%);
+  --accent-10: color-mix(in srgb, var(--accent), #0000 90%);
+  --accent-20: color-mix(in srgb, var(--accent), #0000 80%);
+  --accent-50: color-mix(in srgb, var(--accent), #0000 50%);
+  --accent-80: color-mix(in srgb, var(--accent), #0000 20%);
+  --primary-dark5: color-mix(in srgb, var(--primary), black 5%);
+  --primary-dark10: color-mix(in srgb, var(--primary), black 10%);
+  --primary-dark20: color-mix(in srgb, var(--primary), black 20%);
+  --primary-dark50: color-mix(in srgb, var(--primary), black 50%);
+  --primary-dark80: color-mix(in srgb, var(--primary), black 80%);
+ --primary-dark90: color-mix(in srgb, var(--primary), black 90%);
+--secondary-dark5: color-mix(in srgb, var(--secondary), black 5%);
+--secondary-dark10: color-mix(in srgb, var(--secondary), black 10%);
+  --secondary-dark20: color-mix(in srgb, var(--secondary), black 20%);
+  --secondary-dark50: color-mix(in srgb, var(--secondary), black 50%);
+  --secondary-dark80: color-mix(in srgb, var(--secondary), black 80%);
+--secondary-dark90: color-mix(in srgb, var(--secondary), black 90%);
+--accent-dark5: color-mix(in srgb, var(--accent), black 5%);
+--accent-dark10: color-mix(in srgb, var(--accent), black 10%);
+  --accent-dark20: color-mix(in srgb, var(--accent), black 20%);
+  --accent-dark50: color-mix(in srgb, var(--accent), black 50%);
+  --accent-dark80: color-mix(in srgb, var(--accent), black 80%);
+--accent-dark90: color-mix(in srgb, var(--accent), black 90%);
+}
+    </style>
+  
+  
+
+
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+	<div 
+    class="page-component__bg_image_box    bg-white-color   page-component__bg_image_box--has-image  new-test-2 header-60-parent  is-first-component"
+    id="header-60-631821"
+     style="background-image: url('https://unicorn-images.b-cdn.net/e1319c29-6e36-4d7e-9066-807bb2c46bc0?optimizer=gif')" 
+    
+  >
+		
+		<div 
+      class="page-component__bg_overlay_box " 
+      style="opacity: 0;"
+    >
+			
+		</div>
+    
+		<div class="page-component__wrapper" style="z-index: 116;padding-top:180px;padding-bottom: 1px;">
+      
+        
+
+	
+	
+	
+  
+  
+	<header class="header-60 graphics-image default-graphics-image">
+		<div class="header-60__box">
+			<div class="container">
+				<div class="header-60__heading">
+					
+						
+							<h1 class="title-text heading heading--accent " ><a rel="nofollow" href="https://www.producthunt.com/products/unicorn-platform/awards" target="_blank"> <img class="ph-awwards" alt="Product Hunt Award" src="https://unicorn-images.b-cdn.net/467e23f7-778c-4586-bafc-bf0c86bba7a5"></a> <a href="https://www.producthunt.com/products/unicorn-platform/awards" target="_blank"> <img class="ph-awwards" alt="Product Hunt Award" src="https://unicorn-images.b-cdn.net/702e79dc-32cf-4790-a6e4-e1053feddb00"></a> </br><span style="color:#943BDC">Create a&nbsp;Website</span> for&nbsp;Your Project Fast</h1>
+						
+					
+					
+						<div class="subtitle-text header-60__text content_box  "><p>Unicorn Platform is an <strong>AI website builder</strong> that helps to quickly create websites without design or development skills for <strong>SaaS</strong>, <strong>Apps</strong>, <strong>Directories, Blogs</strong>, <strong>Personal pages</strong>, and more.</p>
+</div>
+					
+				</div>
+				<div class="header-60__buttons">
+					
+	
+<div class="buttons-set"><ul class="buttons-set__list"><li class="buttons-set__item"><a
+				 data-stripe-product-id="" data-stripe-mode="payment" data-successful-payment-url="" data-cancel-payment-url=""
+
+				 class="button button--accent-bg " href="https://app.unicornplatform.com/auth/join" target="_self"   onclick="$tac(&#39;conversion&#39;, {   type: &#39;CTA_CLICK&#39; });"   ><span class="button__text">Create Your Website</span></a></li></ul><div class="def-12_8 content-text content_box cta_bottom_info ">Get free lifetime plan</div></div>
+
+				</div>
+				<div class="header-60__mockup">
+          
+            
+          
+          
+           
+
+
+
+
+
+<div class="mockup_v2 mockup_v2--Empty">
+  <div class="mockup_v2__img_box">
+    <div 
+        class="mockup_v2__screenshot mockup_v2__area"
+         style="position: relative;" 
+    >
+      
+
+        
+
+      
+    </div>
+    <img
+      
+      class="mockup_v2__device_img js-tab-content-item"
+      alt="Device frame"
+       style="display: none;" 
+
+      
+        src="https://unicorn-images.b-cdn.net/0e8e8674-a59a-4fca-af68-ff6949495a46?optimizer=gif"
+        srcset="https://unicorn-images.b-cdn.net/0e8e8674-a59a-4fca-af68-ff6949495a46?optimizer=gif&amp;width=200&amp;height=200 200w,https://unicorn-images.b-cdn.net/0e8e8674-a59a-4fca-af68-ff6949495a46?optimizer=gif&amp;width=200&amp;height=200 200w,https://unicorn-images.b-cdn.net/0e8e8674-a59a-4fca-af68-ff6949495a46?optimizer=gif&amp;width=200&amp;height=200 200w,https://unicorn-images.b-cdn.net/0e8e8674-a59a-4fca-af68-ff6949495a46?optimizer=gif&amp;width=200&amp;height=200 200w,https://unicorn-images.b-cdn.net/0e8e8674-a59a-4fca-af68-ff6949495a46?optimizer=gif&amp;width=200&amp;height=200 200w,https://unicorn-images.b-cdn.net/0e8e8674-a59a-4fca-af68-ff6949495a46?optimizer=gif&amp;width=200&amp;height=200 200w,https://unicorn-images.b-cdn.net/0e8e8674-a59a-4fca-af68-ff6949495a46?optimizer=gif&amp;width=200&amp;height=200 200w,https://unicorn-images.b-cdn.net/0e8e8674-a59a-4fca-af68-ff6949495a46?optimizer=gif&amp;width=200&amp;height=200 200w,https://unicorn-images.b-cdn.net/0e8e8674-a59a-4fca-af68-ff6949495a46?optimizer=gif&amp;width=200&amp;height=200 200w,"
+        sizes="(max-width: 320px) 200px,(max-width: 375px) 200px,(max-width: 425px) 200px,(max-width: 600px) 200px,(max-width: 768px) 200px,(max-width: 1199px) 200px,200px"
+      
+    />
+  </div>
+</div>
+
+
+
+
+				</div>
+			</div>
+		</div>
+	</header>
+
+
+
+      
+		</div>
+	</div>
+  
+    <style>
+      /* Sub-heading */
+
+.nav-02--sticky--black {
+    background-color: transparent;
+}
+
+#header-60-631821 .header-60__box {
+    background-image: none;
+}
+
+#header-60-631821 .heading {
+    font-size: 4.6em;
+   line-height: 1.1;
+}
+
+#header-60-631821 .header-60__text {
+      font-size: 1.2em;
+      line-height: 1.3;
+      max-width: 900px;
+}
+
+#header-60-631821 .header-60__heading {
+    max-width: 700px;
+    margin: auto auto 40px;
+}
+
+/* Buttons */
+
+#header-60-631821 .button {
+    padding: 30px 64px 34px;
+    background:rgba(255,255,255,0.7);
+    border-radius:28px;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(8px);
+    box-shadow: 0px 27px 11px rgba(0, 0, 0, 0.02), 0px 15px 9px rgba(0, 0, 0, 0.05), 0px 7px 7px rgba(0, 0, 0, 0.09), 0px 2px 4px rgba(0,0,0,0.1), inset 0px 19px 24px rgba(255,255,255,0.75);
+    color: #201C2F;
+}
+
+#header-60-631821 .button:hover {
+    box-shadow: 0px 26px 7px rgba(0, 0, 0, 0.02), 0 8px 6px rgba(0, 0, 0, 0.05), 0 5px 5px rgba(0, 0, 0, 0.09), 0px 2px 4px rgba(0,0,0,0.1), inset 0 4px 6px rgba(255,255,255,0.75), 0 0 40px rgba(221, 147, 255, 0.5);
+   color:#943BDC;
+   background:rgba(255, 255, 255,0.8);
+   border: 2px solid rgba(255, 121, 161, 0.1);
+   transform: translate(0, -1px);
+}
+
+#header-60-631821 .button__text {
+    font-size: 24px;
+}
+
+#header-60-631821 .buttons-set__item {
+    display: inline-block;
+    vertical-align: middle;
+    padding: 8px;
+    border-radius: 32px;
+    background: radial-gradient(ellipse farthest-side at left center, #FFF503, transparent), radial-gradient(ellipse farthest-side at center bottom, #FF24B4, transparent), radial-gradient(ellipse farthest-side at top left, #06E1FF, transparent), radial-gradient(ellipse farthest-side at bottom right, #FFF503, transparent), radial-gradient(ellipse farthest-side at bottom left, #05F240, transparent), radial-gradient(ellipse farthest-side at right center, #705CF2, transparent), radial-gradient(ellipse farthest-side at top right, #FF24B4, transparent);
+    font-size: 0;
+    margin-bottom:16px;
+}
+
+#header-60-631821 .cta_bottom_info {
+    font-size: 1em;
+    color: #9291A5;
+}
+
+#header-60-631821 .ph-awwards {
+    height: 48px;
+}
+
+#header-60-631821 .page-component__wrapper {
+    margin-top: -120px;
+}
+
+.editor #header-60-631821 .page-component__wrapper {
+    margin-top: 0;
+}
+
+@media (max-width: 768px) {
+    #header-60-631821 .button__text {
+    font-size: 18px;
+}
+   #header-60-631821 .heading {
+    font-size: 3.6em;
+}
+   #header-60-631821 .header-60__text {
+      font-size: 1em;
+      line-height: 1.3;
+   }
+   #header-60-631821 .ph-awwards {
+    height: 32px;
+}
+
+#header-60-631821 .page-component__wrapper {
+    margin-top: -120px;
+    padding-top: 200px;
+}
+}
+    </style>
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+  
+	<div 
+    class="page-component__bg_image_box    page-component__bg_image_box--dark-bg  bg-accent-color   banner_04 uni-is-dark-bg  header-23-parent  is-not-first-component"
+    id="header-23-611371"
+    
+    
+  >
+		
+		<div 
+      class="page-component__bg_overlay_box " 
+      style=""
+    >
+			
+		</div>
+    
+		<div class="page-component__wrapper" style="z-index: 115;padding-top: 1px;padding-bottom: 1px;">
+      
+        
+	
+	
+	
+	
+	<header class="header-23 graphics-image default-graphics-image">
+		<div class="container container--large header-23__container">
+			<div class="header-23__left">
+				<div class="header-23__left_content">
+					
+						
+							<h2 class="title-text heading heading--accent header-23__heading  text-white" >New!</h2>
+						
+					
+					
+						<div class="subtitle-text header-23__text content_box  text-white"><p>Everything about making successful Directories!</p>
+</div>
+					
+					<div class="header-23__cta_box">
+						
+	
+<div class="buttons-set"><ul class="buttons-set__list"><li class="buttons-set__item"><a
+				 data-stripe-product-id="" data-stripe-mode="payment" data-successful-payment-url="" data-cancel-payment-url=""
+
+				 class="button button--white-bg " href="https://johnrush.me/directory-guide/" target="_blank"    ><span class="button__text">Order Now</span></a></li></ul></div>
+
+					</div>
+				</div>
+			</div>
+			<div class="header-23__right">
+        <img 
+                    
+                    loading="lazy"
+                    class="header-23__img"
+                    alt="John Rush"
+
+                    
+                      src="https://unicorn-images.b-cdn.net/e0afd5be-14b5-4a44-ac6c-5f3f51bbaa33?optimizer=gif"
+                      srcset="https://unicorn-images.b-cdn.net/e0afd5be-14b5-4a44-ac6c-5f3f51bbaa33?optimizer=gif&amp;width=290&amp;height=290 290w,https://unicorn-images.b-cdn.net/e0afd5be-14b5-4a44-ac6c-5f3f51bbaa33?optimizer=gif&amp;width=300&amp;height=300 300w,https://unicorn-images.b-cdn.net/e0afd5be-14b5-4a44-ac6c-5f3f51bbaa33?optimizer=gif&amp;width=300&amp;height=300 300w,https://unicorn-images.b-cdn.net/e0afd5be-14b5-4a44-ac6c-5f3f51bbaa33?optimizer=gif&amp;width=300&amp;height=300 300w,https://unicorn-images.b-cdn.net/e0afd5be-14b5-4a44-ac6c-5f3f51bbaa33?optimizer=gif&amp;width=400&amp;height=400 400w,https://unicorn-images.b-cdn.net/e0afd5be-14b5-4a44-ac6c-5f3f51bbaa33?optimizer=gif&amp;width=400&amp;height=400 400w,https://unicorn-images.b-cdn.net/e0afd5be-14b5-4a44-ac6c-5f3f51bbaa33?optimizer=gif&amp;width=400&amp;height=400 400w,https://unicorn-images.b-cdn.net/e0afd5be-14b5-4a44-ac6c-5f3f51bbaa33?optimizer=gif&amp;width=400&amp;height=400 400w,"
+                      sizes="(max-width: 320px) 290px,(max-width: 375px) 300px,(max-width: 425px) 300px,(max-width: 600px) 300px,(max-width: 1020px) 400px,400px"
+                    
+                    
+                  />
+      </div>
+		</div>
+	</header>
+
+
+      
+		</div>
+	</div>
+  
+    <style>
+      .nav-02 {
+margin-top: 56px;
+}
+
+.editor .nav-02 {
+margin-top: 0;
+}
+
+.editor .first_component {
+    padding-top: 0;
+}
+
+.first_component {
+    padding-top: 80px;
+}
+
+.editor #header-23-611371 {
+position: absolute;
+z-index: 965;
+transform:translateY(-80px);
+top:0;
+}
+
+.editor {
+    padding: 100px 20px 250px;
+}
+
+#header-23-611371 {
+position: absolute;
+width: 100%;
+top: 0;
+z-index: 1000;
+}
+
+#header-23-611371 .heading {
+    font-size: 16px;
+}
+
+#header-23-611371 .header-23__left_content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    grid-gap: 8px;
+    align-items: center;
+    padding-right: 0px;
+    justify-content: flex-start;
+    width: 100%;
+    max-width: 100%;
+}
+
+#header-23-611371 .header-23__left {
+   width: 100%;
+   max-width:100%;
+}
+
+#header-23-611371 .header-23__container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-wrap: nowrap;
+    flex-direction: row-reverse;
+    grid-gap: 0px;
+}
+
+#header-23-611371 .container {
+    max-width: 100%;
+    min-height: 40px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+#header-23-611371 .header-23__cta_box {
+    margin-top: 0px;
+}
+
+#header-23-611371 .header-23__img {
+    height: 40px;
+    width: 40px;
+    text-align: center;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+#header-23-611371 .header-23__right {
+    width: 40px;
+    height: 40px;
+    text-align: start;
+    margin-right: 16px;
+}
+
+#header-23-611371 .buttons-set__item {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 0;
+    margin-right: 0;
+    padding-bottom: 0px;
+    font-size: 0;
+}
+
+#header-23-611371 .button {
+    padding: 8px 16px 10px;
+    min-width: max-content;
+    min-height: 32px;
+}
+
+#header-23-611371 .header-23__text {
+    width: 100%;
+    max-width: 700px;
+    font-size: 16px;
+    margin-right: auto;
+    text-align: start;
+}
+
+@media (max-width: 1020px) {
+#header-23-611371 .header-23__right {
+    display: none;
+}
+
+#header-23-611371 .header-23__left {
+    padding-bottom: 0;
+}
+
+#header-23-611371 .header-23__text {
+        margin-left: 0;
+    }
+
+#header-23-611371 .header-23__cta_box {
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
+@media (max-width: 900px) {
+.nav-02__list--mobile {
+    padding-top: 280px;
+}
+}
+
+@media (max-width: 768px) {
+#header-23-611371 .header-23__right {
+    display: none;
+}
+
+#header-23-611371 .header-23__img {
+    display: none;
+}
+
+#header-23-611371 .heading {
+    font-size:16px;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+#header-23-611371 .header-23__text {
+    max-width: fit-content;
+    font-size: 14px;
+}
+
+#header-23-611371 .header-23__container {
+    grid-gap: 0px;
+}
+
+#header-23-611371 .header-23__left_content {
+        flex-direction: row;
+}
+
+#header-23-611371 .container {
+    padding: 6px 15px;
+}
+
+#header-23-611371 .header-23__left {
+    padding-bottom: 0;
+}
+}
+
+@media (max-width: 500px) {
+
+.nav-02 {
+    margin-top: 80px;
+}
+
+#header-23-611371 .header-23__left_content {
+    flex-direction: column;
+    grid-gap: 0;
+    align-items: flex-start;
+    padding-right: 0px;
+    justify-content: center;
+}
+
+    #header-23-611371 .header-23__cta_box {
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+    }
+
+#header-23-611371 .header-23__left_content {
+    max-width: 70%;
+}
+}
+
+    </style>
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+  
+	<div 
+    class="page-component__bg_image_box    bg-white-color   other-01-parent  is-not-first-component"
+    id="other-01-211951"
+    
+    
+  >
+		
+		<div 
+      class="page-component__bg_overlay_box " 
+      style=""
+    >
+			
+		</div>
+    
+		<div class="page-component__wrapper" style="z-index: 114;padding-top: 1px;padding-bottom: 1px;">
+      
+        
+	
+	
+	<section>
+		
+
+
+
+
+		<div class="badge-main">
+  <div class="avatars-container">
+    <a class="avatar-link" href="https://twitter.com/johnrushx" target="_blank">
+      <img src="https://unicorn-images.b-cdn.net/ddb403eb-1678-40b8-8d33-efdeee3ccf44" alt="John Rush" class="avatar">
+    </a>
+    <a class="avatar-link" href="https://twitter.com/alexanderisorax" target="_blank">
+  <img src="https://unicorn-images.b-cdn.net/acd510d2-fa4c-45ba-b70c-99bbe97a4373" alt="Alexander Isora" class="avatar">
+    </a>
+    <a class="avatar-link" href="https://www.linkedin.com/in/-chrisbyrne/" target="_blank">
+  <img class="avatar" src="https://unicorn-images.b-cdn.net/2941146d-83a2-43d8-a3ce-90c421d5546c" alt="Chris Byrne">
+    </a>
+    <a class="avatar-link" href="https://www.linkedin.com/in/polisantiago/" target="_blank">
+  <img src="https://unicorn-images.b-cdn.net/129f8a74-35f9-406c-8b50-5f384670678f" alt="Santiago Poli" class="avatar">
+    </a>
+  </div>
+  <div class="data-container">
+    <div class="rating-container">
+         <div class="logo-container">
+            <img src="https://unicorn-images.b-cdn.net/5ac75c92-6df5-44d8-9740-460164f0c2ae" alt="Product Hunt" class="logo">
+            <img src="https://unicorn-images.b-cdn.net/e5a6cd04-1c02-4d7c-8f56-0aef051efc5b" alt="G2" class="logo">
+            <img class="logo" src="https://unicorn-images.b-cdn.net/a592cb93-3616-4029-b0f7-0ef2d461f810" alt="Trustpilot">
+         </div>
+         <div class="stars-container">
+           <img src="https://unicorn-images.b-cdn.net/c1ce40d9-f0fd-408a-a0f1-0a34ef8387ac" alt="stars-rating" class="stars">
+         </div>
+   </div>
+   <div class="text-container">
+      <p class="rating-text">
+        Loved by <b>100,000+</b> founders
+      </p>
+   </div>
+  </div>
+  
+</div>  
+	</section>
+
+      
+		</div>
+	</div>
+  
+    <style>
+      #other-01-211951 .badge-main {
+  display:flex;
+  flex-direction: row;
+  align-items: center;
+  width:fit-content;
+  border-radius:56px;
+  background:linear-gradient(to bottom right, #F3D1F1,#FEF5DB);
+  border:2px solid #DDB9FB;
+  padding:12px 32px 12px 16px;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+@media (max-width:768px){
+  #other-01-211951 .badge-main {
+  padding:8px 24px 8px 10px;
+}
+}
+
+#other-01-211951 .avatars-container {
+  display:flex;
+  flex-direction: row;
+  align-items: center;
+  margin-right:16px;
+}
+
+#other-01-211951 .avatar {
+  width:60px;
+  height:60px;
+  outline:3px solid #F4D3F1;
+  border-radius:30px;
+  transition:transform 0.2s ease;
+}
+
+@media (max-width:768px){
+  #other-01-211951 .avatar {
+  width:48px;
+  height:48px;
+  outline:2px solid #F4D3F1;
+  border-radius:30px;
+  transition:transform 0.2s ease;
+}
+}
+
+#other-01-211951 .avatar:hover {
+  transform:scale(1.07)
+}
+
+#other-01-211951 .avatar-link:nth-child(1) {
+  z-index: 4;
+  margin-left:0px;
+}
+
+#other-01-211951 .avatar-link:nth-child(2) {
+  z-index: 3;
+  margin-left: -16px;
+}
+
+#other-01-211951 .avatar-link:nth-child(3) {
+  z-index: 2;
+  margin-left: -16px;
+}
+
+#other-01-211951 .avatar-link:nth-child(4) {
+  z-index: 1;
+  margin-left: -16px;
+}
+
+#other-01-211951 .data-container {
+  display:flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+#other-01-211951 .rating-container{
+  display:flex;
+  flex-direction:row;
+  align-items:center;
+  margin-bottom:-10px;
+}
+
+#other-01-211951 .logo-container{
+  margin-right:8px;
+}
+
+#other-01-211951 .logo {
+  width:32px;
+  height:32px;
+  outline:2px solid #FAE7E5;
+  border-radius:30px;
+}
+
+@media (max-width:768px){
+  #other-01-211951 .logo {
+  width:24px;
+  height:24px;
+  outline:2px solid #FAE7E5;
+  border-radius:30px;
+}
+}
+
+#other-01-211951 .stars {
+  height:24px;
+}
+
+@media (max-width:768px){
+  #other-01-211951 .stars {
+  height:20px;
+}
+}
+
+#other-01-211951 .logo:nth-child(1) {
+  z-index: 4;
+  margin-left:0px;
+}
+
+#other-01-211951 .logo:nth-child(2) {
+  z-index: 3;
+  margin-left: -8px;
+}
+
+#other-01-211951 .logo:nth-child(3) {
+  z-index: 2;
+  margin-left: -8px;
+}
+
+#other-01-211951 .rating-text{
+  font-size:16px;
+  line-height:1;
+  color:#A690B4;
+  margin-bottom: 0;
+  margin-top: 12px;
+}
+
+@media (max-width:768px){
+  #other-01-211951 .rating-text{
+  font-size:12px;
+}
+}
+
+    </style>
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+  
+	<div 
+    class="page-component__bg_image_box    bg-white-color   header-60-parent  is-not-first-component"
+    id="header-60-5701"
+    
+    
+  >
+		
+		<div 
+      class="page-component__bg_overlay_box " 
+      style=""
+    >
+			
+		</div>
+    
+		<div class="page-component__wrapper" style="z-index: 113;padding-top:30px;padding-bottom:70px;">
+      
+        
+
+	
+	
+	
+  
+  
+	<header class="header-60 graphics-HTML default-graphics-image">
+		<div class="header-60__box">
+			<div class="container">
+				<div class="header-60__heading">
+					
+					
+				</div>
+				<div class="header-60__buttons">
+					
+	
+
+
+				</div>
+				<div class="header-60__mockup">
+          
+            
+          
+          
+           
+
+
+
+
+
+<div class="mockup_v2 mockup_v2--apple_macbook_pro">
+  <div class="mockup_v2__img_box">
+    <div 
+        class="mockup_v2__screenshot mockup_v2__area"
+        
+    >
+      
+
+        
+          <div class="graphics-HTML__code-snippet">
+            <div id="videoBackground">
+  <video style="object-fit: cover; background-size: cover; width: 100%; height: 100%" poster="https://unicorn-images.b-cdn.net/79b12490-5958-419c-a5e8-7611cc9be440" preload="auto" playsinline autoplay loop muted>
+    <source src="https://unicorn-s3.b-cdn.net/279338881-ef608e5c-1891-4401-8557-09348a62eeed.mp4" type="video/mp4">
+  </video>
+</div>
+
+<script>
+$(document).ready(() => {
+  let width = $(window).width();
+  let height = $(window).height();
+  $("#videoBackground")
+    .width(width)
+    .height(height);
+});
+
+$(window).resize(() => {
+  let width = $(window).width();
+  let height = $(window).height();
+  $("#videoBackground")
+    .width(width)
+    .height(height);
+});
+</script>
+
+<style>
+if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+      $('.header-60__mockup').find('div').removeClass(function() {
+      return $(this).attr('class');
+  });
+  $('#videoBackground video').css('width', '100%');
+  $('#videoBackground').removeAttr('id');
+  $('.mockup_v2__device_img').remove();
+
+
+  $('.header-60__mockup').css({
+    'margin-left': '-15px',
+    'margin-right': '-15px'
+  });
+
+}
+</style>
+          </div>
+        
+
+      
+    </div>
+    <img
+      loading="lazy"
+      class="mockup_v2__device_img js-tab-content-item"
+      alt="Device frame"
+      
+
+      
+        src="https://unicorn-images.b-cdn.net/c77c0ba4-45b8-41ed-9977-8f65dde5393e?optimizer=gif"
+        srcset="https://unicorn-images.b-cdn.net/c77c0ba4-45b8-41ed-9977-8f65dde5393e?optimizer=gif&amp;width=261&amp;height=152 261w,https://unicorn-images.b-cdn.net/c77c0ba4-45b8-41ed-9977-8f65dde5393e?optimizer=gif&amp;width=311&amp;height=180 311w,https://unicorn-images.b-cdn.net/c77c0ba4-45b8-41ed-9977-8f65dde5393e?optimizer=gif&amp;width=356&amp;height=207 356w,https://unicorn-images.b-cdn.net/c77c0ba4-45b8-41ed-9977-8f65dde5393e?optimizer=gif&amp;width=513&amp;height=297 513w,https://unicorn-images.b-cdn.net/c77c0ba4-45b8-41ed-9977-8f65dde5393e?optimizer=gif&amp;width=664&amp;height=385 664w,https://unicorn-images.b-cdn.net/c77c0ba4-45b8-41ed-9977-8f65dde5393e?optimizer=gif&amp;width=945&amp;height=547 945w,https://unicorn-images.b-cdn.net/c77c0ba4-45b8-41ed-9977-8f65dde5393e?optimizer=gif&amp;width=756&amp;height=438 756w,https://unicorn-images.b-cdn.net/c77c0ba4-45b8-41ed-9977-8f65dde5393e?optimizer=gif&amp;width=522&amp;height=304 522w,https://unicorn-images.b-cdn.net/c77c0ba4-45b8-41ed-9977-8f65dde5393e?optimizer=gif&amp;width=622&amp;height=360 622w,https://unicorn-images.b-cdn.net/c77c0ba4-45b8-41ed-9977-8f65dde5393e?optimizer=gif&amp;width=712&amp;height=414 712w,https://unicorn-images.b-cdn.net/c77c0ba4-45b8-41ed-9977-8f65dde5393e?optimizer=gif&amp;width=1026&amp;height=594 1026w,https://unicorn-images.b-cdn.net/c77c0ba4-45b8-41ed-9977-8f65dde5393e?optimizer=gif&amp;width=1328&amp;height=770 1328w,https://unicorn-images.b-cdn.net/c77c0ba4-45b8-41ed-9977-8f65dde5393e?optimizer=gif&amp;width=1890&amp;height=1094 1890w,https://unicorn-images.b-cdn.net/c77c0ba4-45b8-41ed-9977-8f65dde5393e?optimizer=gif&amp;width=1512&amp;height=876 1512w,https://unicorn-images.b-cdn.net/c77c0ba4-45b8-41ed-9977-8f65dde5393e?optimizer=gif&amp;width=783&amp;height=456 783w,https://unicorn-images.b-cdn.net/c77c0ba4-45b8-41ed-9977-8f65dde5393e?optimizer=gif&amp;width=933&amp;height=540 933w,https://unicorn-images.b-cdn.net/c77c0ba4-45b8-41ed-9977-8f65dde5393e?optimizer=gif&amp;width=1068&amp;height=621 1068w,https://unicorn-images.b-cdn.net/c77c0ba4-45b8-41ed-9977-8f65dde5393e?optimizer=gif&amp;width=1539&amp;height=891 1539w,https://unicorn-images.b-cdn.net/c77c0ba4-45b8-41ed-9977-8f65dde5393e?optimizer=gif&amp;width=1992&amp;height=1155 1992w,https://unicorn-images.b-cdn.net/c77c0ba4-45b8-41ed-9977-8f65dde5393e?optimizer=gif&amp;width=2835&amp;height=1641 2835w,https://unicorn-images.b-cdn.net/c77c0ba4-45b8-41ed-9977-8f65dde5393e?optimizer=gif&amp;width=2268&amp;height=1314 2268w,"
+        sizes="(max-width: 320px) 261px,(max-width: 375px) 311px,(max-width: 425px) 356px,(max-width: 600px) 513px,(max-width: 768px) 664px,(max-width: 1199px) 945px,756px"
+      
+    />
+  </div>
+</div>
+
+
+
+
+				</div>
+			</div>
+		</div>
+	</header>
+
+
+
+      
+		</div>
+	</div>
+  
+    <style>
+      /* Sub-heading */
+
+#header-60-5701 .header-60__text {
+      font-size: 1.2em;
+      line-height: 1.4;
+      max-width: 500px;
+}
+@media (max-width: 768px) {
+#header-60-5701 .header-60__text {
+      font-size: 1.1em;
+      line-height: 1.4;
+   }
+}
+#header-60-5701 .header-60__heading {
+    max-width: 600px;
+    margin: auto auto 40px;
+}
+
+/* Buttons */
+
+#header-60-5701 .button {
+    padding: 16px 20px 16px;
+    min-width: 180px;
+    min-height: 44px;
+    border-radius: 8px;
+    box-shadow: 0 0px 0px 0 rgba(136,144,195,0.2), 0 0px 0px 0 rgba(37,44,97,0.15);
+}
+
+#header-60-5701 .container {
+    margin-right: auto;
+    margin-left: auto;
+    padding: 0 15px;
+    max-width: 100%;
+}
+
+#header-60-5701 .header-60__mockup {
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#header-60-5701 .mockup_v2__device_img {
+    max-width: 1200px;
+    width: 1200px;
+}
+
+#header-60-5701  .mockup_v2 {
+    max-width: 100%;
+    margin: auto;
+}
+
+#header-60-5701 .mockup_v2__area {
+    top: 2.7%;
+    height: 86.7%;
+    width: 80%;
+}
+
+@media (max-width: 1200px) {
+    #header-60-5701 .header-60__mockup {
+    width: 1000px;
+}
+
+#header-60-5701 .mockup_v2__device_img {
+    max-width: 1000px;
+    width: 1000px;
+}
+}
+
+
+@media (max-width: 960px) {
+    #header-60-5701 .header-60__mockup {
+    width: 360px;
+}
+
+#header-60-5701 .mockup_v2__device_img {
+    max-width: 360px;
+    width: 360px;
+}
+}
+    </style>
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+  
+	<div 
+    class="page-component__bg_image_box    bg-white-color   other-01-parent  is-not-first-component"
+    id="other-01-849641"
+    
+    
+  >
+		
+		<div 
+      class="page-component__bg_overlay_box " 
+      style=""
+    >
+			
+		</div>
+    
+		<div class="page-component__wrapper" style="z-index: 112;padding-top:0px;padding-bottom:0px;">
+      
+        
+	
+	
+	<section>
+		
+
+
+
+
+		<style>
+.cta_button-01__button_box .button, .header-23__cta_box .button{
+    padding: 16px 30px;
+    min-height: 52px;
+}
+</style>
+<!--cache_test-->
+	</section>
+
+      
+		</div>
+	</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+  
+	<div 
+    class="page-component__bg_image_box    bg-white-color   features-03-parent  is-not-first-component"
+    id="features-03-706291"
+    
+    
+  >
+		
+		<div 
+      class="page-component__bg_overlay_box " 
+      style=""
+    >
+			
+		</div>
+    
+		<div class="page-component__wrapper" style="z-index: 111;padding-top:80px;padding-bottom:90px;">
+      
+        
+	
+	
+  
+	<div class="features-03">
+		
+
+
+	
+	
+	<div class="container container--small">
+		<div class="title-box title-box--center">
+			
+				
+					<h2 class="title-text heading " >Really Easy To Use <span style="color:#943BDC">Website Builder</span></h2>
+				
+			
+			
+				<div class="subtitle-text title-box__text content_box "><p>Unicorn Platform is a <strong>powerful website builder</strong> for startups, solo entrepreneurs, and hackers. Try it for free.</p>
+</div>
+			
+		</div>
+	</div>
+
+
+		<div class="container">
+			<ul class="features-03__items">
+				
+					
+						<li class="features-03__item">
+							<div class="features-03__img_box">
+								<div class="features-03__img">
+									
+                    
+										
+
+	
+	
+
+		<img 
+      loading="lazy" 
+      alt="3d image 17"
+      class="" 
+      height="100"
+
+      
+        src="https://unicorn-images.b-cdn.net/1e79e677-2226-47d1-95c6-2937da789b0e?optimizer=gif"
+        srcset="https://unicorn-images.b-cdn.net/1e79e677-2226-47d1-95c6-2937da789b0e?optimizer=gif&amp;width=60&amp;height=60 60w,https://unicorn-images.b-cdn.net/1e79e677-2226-47d1-95c6-2937da789b0e?optimizer=gif&amp;width=120&amp;height=120 120w,https://unicorn-images.b-cdn.net/1e79e677-2226-47d1-95c6-2937da789b0e?optimizer=gif&amp;width=180&amp;height=180 180w,"
+        sizes="60px"
+      
+    />
+
+	
+
+
+									
+								</div>
+							</div>
+							<div class="title-text--inner features-03__number   def-24 features-03__number--medium   ">AI-Powered
+							</div>
+							<div class="content-text features-03__word  ">Build a website or make changes with prompts</div>
+						</li>
+					
+				
+					
+						<li class="features-03__item">
+							<div class="features-03__img_box">
+								<div class="features-03__img">
+									
+                    
+										
+
+	
+	
+
+		<img 
+      loading="lazy" 
+      alt="3d image 31"
+      class="" 
+      height="100"
+
+      
+        src="https://unicorn-images.b-cdn.net/c516565c-425c-449d-80d9-a5660edfd8c8?optimizer=gif"
+        srcset="https://unicorn-images.b-cdn.net/c516565c-425c-449d-80d9-a5660edfd8c8?optimizer=gif&amp;width=60&amp;height=60 60w,https://unicorn-images.b-cdn.net/c516565c-425c-449d-80d9-a5660edfd8c8?optimizer=gif&amp;width=120&amp;height=120 120w,https://unicorn-images.b-cdn.net/c516565c-425c-449d-80d9-a5660edfd8c8?optimizer=gif&amp;width=180&amp;height=180 180w,"
+        sizes="60px"
+      
+    />
+
+	
+
+
+									
+								</div>
+							</div>
+							<div class="title-text--inner features-03__number   def-24 features-03__number--medium   ">100% No Code
+							</div>
+							<div class="content-text features-03__word  ">No need to code to build a powerful website</div>
+						</li>
+					
+				
+					
+						<li class="features-03__item">
+							<div class="features-03__img_box">
+								<div class="features-03__img">
+									
+                    
+										
+
+	
+	
+
+		<img 
+      loading="lazy" 
+      alt="3d image 39"
+      class="" 
+      height="100"
+
+      
+        src="https://unicorn-images.b-cdn.net/e912fa9c-a20f-4621-bd47-3d6b23e6f9cb?optimizer=gif"
+        srcset="https://unicorn-images.b-cdn.net/e912fa9c-a20f-4621-bd47-3d6b23e6f9cb?optimizer=gif&amp;width=60&amp;height=60 60w,https://unicorn-images.b-cdn.net/e912fa9c-a20f-4621-bd47-3d6b23e6f9cb?optimizer=gif&amp;width=120&amp;height=120 120w,https://unicorn-images.b-cdn.net/e912fa9c-a20f-4621-bd47-3d6b23e6f9cb?optimizer=gif&amp;width=180&amp;height=180 180w,"
+        sizes="60px"
+      
+    />
+
+	
+
+
+									
+								</div>
+							</div>
+							<div class="title-text--inner features-03__number   def-24 features-03__number--medium   ">UI &amp; UX-Ready
+							</div>
+							<div class="content-text features-03__word  ">No need to be a designer to make a website</div>
+						</li>
+					
+				
+					
+						<li class="features-03__item">
+							<div class="features-03__img_box">
+								<div class="features-03__img">
+									
+                    
+										
+
+	
+	
+
+		<img 
+      loading="lazy" 
+      alt="3d image 26"
+      class="" 
+      height="100"
+
+      
+        src="https://unicorn-images.b-cdn.net/a9fa6535-caf1-4a4c-8cf2-8ef3d6f4288a?optimizer=gif"
+        srcset="https://unicorn-images.b-cdn.net/a9fa6535-caf1-4a4c-8cf2-8ef3d6f4288a?optimizer=gif&amp;width=60&amp;height=60 60w,https://unicorn-images.b-cdn.net/a9fa6535-caf1-4a4c-8cf2-8ef3d6f4288a?optimizer=gif&amp;width=120&amp;height=120 120w,https://unicorn-images.b-cdn.net/a9fa6535-caf1-4a4c-8cf2-8ef3d6f4288a?optimizer=gif&amp;width=180&amp;height=180 180w,"
+        sizes="60px"
+      
+    />
+
+	
+
+
+									
+								</div>
+							</div>
+							<div class="title-text--inner features-03__number   def-24 features-03__number--medium   ">Custom Code
+							</div>
+							<div class="content-text features-03__word  ">If you need more, you can add custom code</div>
+						</li>
+					
+				
+					
+						<li class="features-03__item">
+							<div class="features-03__img_box">
+								<div class="features-03__img">
+									
+                    
+										
+
+	
+	
+
+		<img 
+      loading="lazy" 
+      alt="3d image 34"
+      class="" 
+      height="100"
+
+      
+        src="https://unicorn-images.b-cdn.net/cd5933db-290e-452d-b774-bcb40a643e4c?optimizer=gif"
+        srcset="https://unicorn-images.b-cdn.net/cd5933db-290e-452d-b774-bcb40a643e4c?optimizer=gif&amp;width=60&amp;height=60 60w,https://unicorn-images.b-cdn.net/cd5933db-290e-452d-b774-bcb40a643e4c?optimizer=gif&amp;width=120&amp;height=120 120w,https://unicorn-images.b-cdn.net/cd5933db-290e-452d-b774-bcb40a643e4c?optimizer=gif&amp;width=180&amp;height=180 180w,"
+        sizes="60px"
+      
+    />
+
+	
+
+
+									
+								</div>
+							</div>
+							<div class="title-text--inner features-03__number   def-24 features-03__number--medium   ">Create a Blog
+							</div>
+							<div class="content-text features-03__word  ">Attract your audience by creating a blog</div>
+						</li>
+					
+				
+					
+						<li class="features-03__item">
+							<div class="features-03__img_box">
+								<div class="features-03__img">
+									
+                    
+										
+
+	
+	
+
+		<img 
+      loading="lazy" 
+      alt="3d image 21"
+      class="" 
+      height="100"
+
+      
+        src="https://unicorn-images.b-cdn.net/57f94bcc-c3ec-4114-8286-9e5a25f1acaa?optimizer=gif"
+        srcset="https://unicorn-images.b-cdn.net/57f94bcc-c3ec-4114-8286-9e5a25f1acaa?optimizer=gif&amp;width=60&amp;height=60 60w,https://unicorn-images.b-cdn.net/57f94bcc-c3ec-4114-8286-9e5a25f1acaa?optimizer=gif&amp;width=120&amp;height=120 120w,https://unicorn-images.b-cdn.net/57f94bcc-c3ec-4114-8286-9e5a25f1acaa?optimizer=gif&amp;width=180&amp;height=180 180w,"
+        sizes="60px"
+      
+    />
+
+	
+
+
+									
+								</div>
+							</div>
+							<div class="title-text--inner features-03__number   def-24 features-03__number--medium   ">Accept Payments
+							</div>
+							<div class="content-text features-03__word  ">Accept payments with secure Stripe</div>
+						</li>
+					
+				
+			</ul>
+			<div class="bottom_cta">
+				
+	
+<div class="buttons-set"><ul class="buttons-set__list"><li class="buttons-set__item"><a
+				 data-stripe-product-id="" data-stripe-mode="payment" data-successful-payment-url="" data-cancel-payment-url=""
+
+				 class="button button--accent-outline " href="https://app.unicornplatform.com/auth/join" target="_self"   onclick="$tac(&#39;conversion&#39;, {   type: &#39;CTA_CLICK&#39; });"   ><span class="button__text">Get Started Today</span></a></li></ul></div>
+
+			</div>
+		</div>
+	</div>
+
+
+      
+		</div>
+	</div>
+  
+    <style>
+      /* Heading */
+
+#features-03-706291 .heading {
+    font-size: 3.6em;
+    line-height: 1.2;
+    margin: 0 0 0.2em 0;
+}
+
+#features-03-706291 .title-box__text {
+      font-size: 1.2em;
+      max-width: 80%;
+      opacity: 1;
+      margin-left: auto;
+      margin-right: auto;
+}
+
+#features-03-706291 .header-39__text_box {
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#features-03-706291 .container--small {
+    max-width: 1200px;
+}
+
+#features-03-706291 .title-box {
+    margin-bottom: 64px;
+    max-width: 650px;
+}
+
+/* Buttons */
+
+#features-03-706291 .button {
+    padding: 28px 64px 30px;
+    min-width: 180px;
+    min-height: 44px;
+    border-radius: 28px;
+    box-shadow: none;
+    transition: all .2s ease;
+}
+
+#features-03-706291 .button:hover {
+    background-color: var(--primary);
+    color: white;
+    transform: none;
+}
+
+#features-03-706291 .button__text {
+    font-size: 22px;
+}
+
+#features-03-706291 .buttons-set__list {
+    margin-left: 0;
+}
+
+#features-03-706291 .bottom_cta .buttons-set {
+    margin-top: 40px;
+}
+
+/* Image*/
+
+#features-03-706291 .features-03__img img {
+    max-height: 200px;
+    height: 160px;
+    filter: drop-shadow(3px 6px 15px rgba(255, 117, 249, 0.12)) drop-shadow(13px 24px 27px rgba(255, 117, 249, 0.11)) drop-shadow(28px 54px 37px rgba(255, 117, 249, 0.06)) drop-shadow(50px 96px 43px rgba(255, 117, 249, 0.02));
+}
+
+#features-03-706291 .features-03__items {
+    margin-bottom: 0;
+}
+
+#features-03-706291 .features-03__number {
+    font-size: 28px;
+    color: #201C2F;
+    margin-top: 24px;
+}
+
+#features-03-706291 .features-03__word {
+    line-height: 1.4;
+    max-width: 250px;
+    margin: auto;
+    font-size: 18px;
+    color: #565564;
+}
+
+#features-03-706291 .container {
+    max-width: 1200px;
+}
+
+@media (max-width: 1120px) {
+
+#features-03-706291 .title-box {
+    max-width: 800px;
+}
+
+#features-03-706291 .heading {
+    font-size: 4.2em;
+}
+
+#features-03-706291 .title-box__text {
+    font-size: 1.4em;
+}
+}
+
+@media (max-width: 768px) {
+
+#features-03-706291 .heading {
+    font-size: 2.4em;
+}
+
+#features-03-706291 .title-box__text {
+      max-width: 100%;
+}
+#features-03-706291 .button__text {
+    font-size: 20px;
+}
+
+#features-03-706291 .title-box__text {
+      font-size: 1em;
+      max-width: 100%;
+}
+}
+    </style>
+  
+  
+    <script>
+      (function() {
+document.getElementById('features-03-706291').querySelectorAll('img').forEach((img) => {
+    img.removeAttribute("srcset");
+    img.removeAttribute("sizes");
+})
+})()
+    </script>
+  
+
+  
+  
+  
+  
+  
+  
+  
+  
+	<div 
+    class="page-component__bg_image_box    page-component__bg_image_box--dark-bg  bg-custom-color   page-component__bg_image_box--has-image  bg-custom-color--dark  uni-is-dark-bg  posts-01-parent  is-not-first-component"
+    id="posts-01-93491"
+     style="background-image: url('https://unicorn-images.b-cdn.net/fd4005d8-1a42-4110-95ab-5664a73f5c09?optimizer=gif')" 
+    
+  >
+		
+		<div 
+      class="page-component__bg_overlay_box " 
+      style="opacity: 0; background-color: #000000;"
+    >
+			
+		</div>
+    
+		<div class="page-component__wrapper" style="z-index: 110;padding-top:100px;padding-bottom:120px;">
+      
+        
+	
+  
+    
+	<div class="posts-01">
+		
+
+
+	
+	
+	<div class="container container--small">
+		<div class="title-box title-box--center">
+			
+				
+					<h2 class="title-text heading  text-white" >Built with Unicorn Platform</h2>
+				
+			
+			
+				<div class="subtitle-text title-box__text content_box  text-white">We are serving over 104,000 fantastic websites.</div>
+			
+		</div>
+	</div>
+
+
+		<div class="container">
+			<div class="posts-01__wrapper">
+				
+                    
+                        <a class="sh-4 card-container sh-has-hover posts-01__item" href="https://listingbott.com/?ref=unicornplatform" target="_blank">
+                            <div class="posts-01__img_box">
+                                
+                                    
+                                    <img 
+                                      loading="lazy" 
+                                      alt="Post image" 
+                                      class="posts-01__img"
+
+                                      
+                                        src="https://unicorn-images.b-cdn.net/65f1c5a7-9bb3-4a7a-80f7-854f3fd1498b?optimizer=gif"
+                                        srcset="https://unicorn-images.b-cdn.net/65f1c5a7-9bb3-4a7a-80f7-854f3fd1498b?optimizer=gif&amp;width=360&amp;height=777 360w,https://unicorn-images.b-cdn.net/65f1c5a7-9bb3-4a7a-80f7-854f3fd1498b?optimizer=gif&amp;width=415&amp;height=895 415w,https://unicorn-images.b-cdn.net/65f1c5a7-9bb3-4a7a-80f7-854f3fd1498b?optimizer=gif&amp;width=465&amp;height=1003 465w,https://unicorn-images.b-cdn.net/65f1c5a7-9bb3-4a7a-80f7-854f3fd1498b?optimizer=gif&amp;width=640&amp;height=1380 640w,https://unicorn-images.b-cdn.net/65f1c5a7-9bb3-4a7a-80f7-854f3fd1498b?optimizer=gif&amp;width=415&amp;height=895 415w,https://unicorn-images.b-cdn.net/65f1c5a7-9bb3-4a7a-80f7-854f3fd1498b?optimizer=gif&amp;width=720&amp;height=1554 720w,https://unicorn-images.b-cdn.net/65f1c5a7-9bb3-4a7a-80f7-854f3fd1498b?optimizer=gif&amp;width=830&amp;height=1790 830w,https://unicorn-images.b-cdn.net/65f1c5a7-9bb3-4a7a-80f7-854f3fd1498b?optimizer=gif&amp;width=864&amp;height=1863 864w,https://unicorn-images.b-cdn.net/65f1c5a7-9bb3-4a7a-80f7-854f3fd1498b?optimizer=gif&amp;width=864&amp;height=1863 864w,"
+                                        sizes="(max-width: 320px) 360px,(max-width: 375px) 415px,(max-width: 425px) 465px,(max-width: 600px) 640px,415px"
+                                      
+                                    >
+                                
+                                <div class="posts-01__text">
+                                    <h3 class="def-18_72 title-text--inner posts-01__title"></h3>
+                                    <div class="content-text posts-01__info"></div>
+                                </div>
+                            </div>
+                        </a>
+                    
+				
+                    
+                        <a class="sh-4 card-container sh-has-hover posts-01__item" href="https://johnrush.me/?ref=unicornplatform" target="_blank">
+                            <div class="posts-01__img_box">
+                                
+                                    
+                                    <img 
+                                      loading="lazy" 
+                                      alt="Post image" 
+                                      class="posts-01__img"
+
+                                      
+                                        src="https://unicorn-images.b-cdn.net/410272ab-3d29-4182-9ce1-a1ebbadd0891?optimizer=gif"
+                                        srcset="https://unicorn-images.b-cdn.net/410272ab-3d29-4182-9ce1-a1ebbadd0891?optimizer=gif&amp;width=360&amp;height=821 360w,https://unicorn-images.b-cdn.net/410272ab-3d29-4182-9ce1-a1ebbadd0891?optimizer=gif&amp;width=415&amp;height=947 415w,https://unicorn-images.b-cdn.net/410272ab-3d29-4182-9ce1-a1ebbadd0891?optimizer=gif&amp;width=465&amp;height=1061 465w,https://unicorn-images.b-cdn.net/410272ab-3d29-4182-9ce1-a1ebbadd0891?optimizer=gif&amp;width=640&amp;height=1460 640w,https://unicorn-images.b-cdn.net/410272ab-3d29-4182-9ce1-a1ebbadd0891?optimizer=gif&amp;width=415&amp;height=947 415w,https://unicorn-images.b-cdn.net/410272ab-3d29-4182-9ce1-a1ebbadd0891?optimizer=gif&amp;width=720&amp;height=1642 720w,https://unicorn-images.b-cdn.net/410272ab-3d29-4182-9ce1-a1ebbadd0891?optimizer=gif&amp;width=830&amp;height=1894 830w,https://unicorn-images.b-cdn.net/410272ab-3d29-4182-9ce1-a1ebbadd0891?optimizer=gif&amp;width=930&amp;height=2122 930w,https://unicorn-images.b-cdn.net/410272ab-3d29-4182-9ce1-a1ebbadd0891?optimizer=gif&amp;width=1059&amp;height=2415 1059w,https://unicorn-images.b-cdn.net/410272ab-3d29-4182-9ce1-a1ebbadd0891?optimizer=gif&amp;width=1059&amp;height=2415 1059w,"
+                                        sizes="(max-width: 320px) 360px,(max-width: 375px) 415px,(max-width: 425px) 465px,(max-width: 600px) 640px,415px"
+                                      
+                                    >
+                                
+                                <div class="posts-01__text">
+                                    <h3 class="def-18_72 title-text--inner posts-01__title"></h3>
+                                    <div class="content-text posts-01__info"></div>
+                                </div>
+                            </div>
+                        </a>
+                    
+				
+                    
+                        <a class="sh-4 card-container sh-has-hover posts-01__item" href="https://allgpts.co/" target="_blank">
+                            <div class="posts-01__img_box">
+                                
+                                    
+                                    <img 
+                                      loading="lazy" 
+                                      alt="Post image" 
+                                      class="posts-01__img"
+
+                                      
+                                        src="https://unicorn-images.b-cdn.net/535a9146-52eb-400d-ac19-a0d7134629e7?optimizer=gif"
+                                        srcset="https://unicorn-images.b-cdn.net/535a9146-52eb-400d-ac19-a0d7134629e7?optimizer=gif&amp;width=360&amp;height=1207 360w,https://unicorn-images.b-cdn.net/535a9146-52eb-400d-ac19-a0d7134629e7?optimizer=gif&amp;width=415&amp;height=1391 415w,https://unicorn-images.b-cdn.net/535a9146-52eb-400d-ac19-a0d7134629e7?optimizer=gif&amp;width=465&amp;height=1559 465w,https://unicorn-images.b-cdn.net/535a9146-52eb-400d-ac19-a0d7134629e7?optimizer=gif&amp;width=640&amp;height=2145 640w,https://unicorn-images.b-cdn.net/535a9146-52eb-400d-ac19-a0d7134629e7?optimizer=gif&amp;width=415&amp;height=1391 415w,https://unicorn-images.b-cdn.net/535a9146-52eb-400d-ac19-a0d7134629e7?optimizer=gif&amp;width=720&amp;height=2414 720w,https://unicorn-images.b-cdn.net/535a9146-52eb-400d-ac19-a0d7134629e7?optimizer=gif&amp;width=830&amp;height=2782 830w,https://unicorn-images.b-cdn.net/535a9146-52eb-400d-ac19-a0d7134629e7?optimizer=gif&amp;width=930&amp;height=3118 930w,https://unicorn-images.b-cdn.net/535a9146-52eb-400d-ac19-a0d7134629e7?optimizer=gif&amp;width=1094&amp;height=3666 1094w,https://unicorn-images.b-cdn.net/535a9146-52eb-400d-ac19-a0d7134629e7?optimizer=gif&amp;width=1080&amp;height=3621 1080w,https://unicorn-images.b-cdn.net/535a9146-52eb-400d-ac19-a0d7134629e7?optimizer=gif&amp;width=1094&amp;height=3666 1094w,"
+                                        sizes="(max-width: 320px) 360px,(max-width: 375px) 415px,(max-width: 425px) 465px,(max-width: 600px) 640px,415px"
+                                      
+                                    >
+                                
+                                <div class="posts-01__text">
+                                    <h3 class="def-18_72 title-text--inner posts-01__title"></h3>
+                                    <div class="content-text posts-01__info"></div>
+                                </div>
+                            </div>
+                        </a>
+                    
+				
+                    
+                        <a class="sh-4 card-container sh-has-hover posts-01__item" href="https://letter.so/" target="_blank">
+                            <div class="posts-01__img_box">
+                                
+                                    
+                                    <img 
+                                      loading="lazy" 
+                                      alt="Post image" 
+                                      class="posts-01__img"
+
+                                      
+                                        src="https://unicorn-images.b-cdn.net/70bb38f5-3503-493a-a18d-a42cc7698e76?optimizer=gif"
+                                        srcset="https://unicorn-images.b-cdn.net/70bb38f5-3503-493a-a18d-a42cc7698e76?optimizer=gif&amp;width=360&amp;height=1002 360w,https://unicorn-images.b-cdn.net/70bb38f5-3503-493a-a18d-a42cc7698e76?optimizer=gif&amp;width=415&amp;height=1155 415w,https://unicorn-images.b-cdn.net/70bb38f5-3503-493a-a18d-a42cc7698e76?optimizer=gif&amp;width=465&amp;height=1294 465w,https://unicorn-images.b-cdn.net/70bb38f5-3503-493a-a18d-a42cc7698e76?optimizer=gif&amp;width=640&amp;height=1781 640w,https://unicorn-images.b-cdn.net/70bb38f5-3503-493a-a18d-a42cc7698e76?optimizer=gif&amp;width=415&amp;height=1155 415w,https://unicorn-images.b-cdn.net/70bb38f5-3503-493a-a18d-a42cc7698e76?optimizer=gif&amp;width=720&amp;height=2004 720w,https://unicorn-images.b-cdn.net/70bb38f5-3503-493a-a18d-a42cc7698e76?optimizer=gif&amp;width=830&amp;height=2310 830w,https://unicorn-images.b-cdn.net/70bb38f5-3503-493a-a18d-a42cc7698e76?optimizer=gif&amp;width=930&amp;height=2588 930w,https://unicorn-images.b-cdn.net/70bb38f5-3503-493a-a18d-a42cc7698e76?optimizer=gif&amp;width=959&amp;height=2668 959w,https://unicorn-images.b-cdn.net/70bb38f5-3503-493a-a18d-a42cc7698e76?optimizer=gif&amp;width=959&amp;height=2668 959w,"
+                                        sizes="(max-width: 320px) 360px,(max-width: 375px) 415px,(max-width: 425px) 465px,(max-width: 600px) 640px,415px"
+                                      
+                                    >
+                                
+                                <div class="posts-01__text">
+                                    <h3 class="def-18_72 title-text--inner posts-01__title"></h3>
+                                    <div class="content-text posts-01__info"></div>
+                                </div>
+                            </div>
+                        </a>
+                    
+				
+                    
+                        <a class="sh-4 card-container sh-has-hover posts-01__item" href="https://saasemailer.com/?ref=unicornplatform" target="_blank">
+                            <div class="posts-01__img_box">
+                                
+                                    
+                                    <img 
+                                      loading="lazy" 
+                                      alt="Post image" 
+                                      class="posts-01__img"
+
+                                      
+                                        src="https://unicorn-images.b-cdn.net/7a8c64f3-d0a0-42cd-ba19-8e9e4f82047b?optimizer=gif"
+                                        srcset="https://unicorn-images.b-cdn.net/7a8c64f3-d0a0-42cd-ba19-8e9e4f82047b?optimizer=gif&amp;width=360&amp;height=848 360w,https://unicorn-images.b-cdn.net/7a8c64f3-d0a0-42cd-ba19-8e9e4f82047b?optimizer=gif&amp;width=415&amp;height=977 415w,https://unicorn-images.b-cdn.net/7a8c64f3-d0a0-42cd-ba19-8e9e4f82047b?optimizer=gif&amp;width=465&amp;height=1095 465w,https://unicorn-images.b-cdn.net/7a8c64f3-d0a0-42cd-ba19-8e9e4f82047b?optimizer=gif&amp;width=640&amp;height=1506 640w,https://unicorn-images.b-cdn.net/7a8c64f3-d0a0-42cd-ba19-8e9e4f82047b?optimizer=gif&amp;width=415&amp;height=977 415w,https://unicorn-images.b-cdn.net/7a8c64f3-d0a0-42cd-ba19-8e9e4f82047b?optimizer=gif&amp;width=720&amp;height=1696 720w,https://unicorn-images.b-cdn.net/7a8c64f3-d0a0-42cd-ba19-8e9e4f82047b?optimizer=gif&amp;width=830&amp;height=1954 830w,https://unicorn-images.b-cdn.net/7a8c64f3-d0a0-42cd-ba19-8e9e4f82047b?optimizer=gif&amp;width=930&amp;height=2190 930w,https://unicorn-images.b-cdn.net/7a8c64f3-d0a0-42cd-ba19-8e9e4f82047b?optimizer=gif&amp;width=1043&amp;height=2454 1043w,https://unicorn-images.b-cdn.net/7a8c64f3-d0a0-42cd-ba19-8e9e4f82047b?optimizer=gif&amp;width=1043&amp;height=2454 1043w,"
+                                        sizes="(max-width: 320px) 360px,(max-width: 375px) 415px,(max-width: 425px) 465px,(max-width: 600px) 640px,415px"
+                                      
+                                    >
+                                
+                                <div class="posts-01__text">
+                                    <h3 class="def-18_72 title-text--inner posts-01__title"></h3>
+                                    <div class="content-text posts-01__info"></div>
+                                </div>
+                            </div>
+                        </a>
+                    
+				
+                    
+                        <a class="sh-4 card-container sh-has-hover posts-01__item" href="https://osssoftware.org/" target="_blank">
+                            <div class="posts-01__img_box">
+                                
+                                    
+                                    <img 
+                                      loading="lazy" 
+                                      alt="Open Source Software" 
+                                      class="posts-01__img"
+
+                                      
+                                        src="https://unicorn-images.b-cdn.net/3b97bb9a-3e75-42c6-9288-9c1a70206dc9?optimizer=gif"
+                                        srcset="https://unicorn-images.b-cdn.net/3b97bb9a-3e75-42c6-9288-9c1a70206dc9?optimizer=gif&amp;width=360&amp;height=681 360w,https://unicorn-images.b-cdn.net/3b97bb9a-3e75-42c6-9288-9c1a70206dc9?optimizer=gif&amp;width=415&amp;height=785 415w,https://unicorn-images.b-cdn.net/3b97bb9a-3e75-42c6-9288-9c1a70206dc9?optimizer=gif&amp;width=465&amp;height=879 465w,https://unicorn-images.b-cdn.net/3b97bb9a-3e75-42c6-9288-9c1a70206dc9?optimizer=gif&amp;width=640&amp;height=1210 640w,https://unicorn-images.b-cdn.net/3b97bb9a-3e75-42c6-9288-9c1a70206dc9?optimizer=gif&amp;width=415&amp;height=785 415w,https://unicorn-images.b-cdn.net/3b97bb9a-3e75-42c6-9288-9c1a70206dc9?optimizer=gif&amp;width=720&amp;height=1362 720w,https://unicorn-images.b-cdn.net/3b97bb9a-3e75-42c6-9288-9c1a70206dc9?optimizer=gif&amp;width=830&amp;height=1570 830w,https://unicorn-images.b-cdn.net/3b97bb9a-3e75-42c6-9288-9c1a70206dc9?optimizer=gif&amp;width=930&amp;height=1758 930w,https://unicorn-images.b-cdn.net/3b97bb9a-3e75-42c6-9288-9c1a70206dc9?optimizer=gif&amp;width=1120&amp;height=2117 1120w,https://unicorn-images.b-cdn.net/3b97bb9a-3e75-42c6-9288-9c1a70206dc9?optimizer=gif&amp;width=1080&amp;height=2043 1080w,https://unicorn-images.b-cdn.net/3b97bb9a-3e75-42c6-9288-9c1a70206dc9?optimizer=gif&amp;width=1120&amp;height=2117 1120w,"
+                                        sizes="(max-width: 320px) 360px,(max-width: 375px) 415px,(max-width: 425px) 465px,(max-width: 600px) 640px,415px"
+                                      
+                                    >
+                                
+                                <div class="posts-01__text">
+                                    <h3 class="def-18_72 title-text--inner posts-01__title"></h3>
+                                    <div class="content-text posts-01__info"></div>
+                                </div>
+                            </div>
+                        </a>
+                    
+				
+                    
+                        <a class="sh-4 card-container sh-has-hover posts-01__item" href="https://seobotai.com/?ref=unicornplatform" target="_blank">
+                            <div class="posts-01__img_box">
+                                
+                                    
+                                    <img 
+                                      loading="lazy" 
+                                      alt="Post image" 
+                                      class="posts-01__img"
+
+                                      
+                                        src="https://unicorn-images.b-cdn.net/01507aca-e796-4c17-9d6e-a2546864f67d?optimizer=gif"
+                                        srcset="https://unicorn-images.b-cdn.net/01507aca-e796-4c17-9d6e-a2546864f67d?optimizer=gif&amp;width=360&amp;height=777 360w,https://unicorn-images.b-cdn.net/01507aca-e796-4c17-9d6e-a2546864f67d?optimizer=gif&amp;width=415&amp;height=895 415w,https://unicorn-images.b-cdn.net/01507aca-e796-4c17-9d6e-a2546864f67d?optimizer=gif&amp;width=465&amp;height=1003 465w,https://unicorn-images.b-cdn.net/01507aca-e796-4c17-9d6e-a2546864f67d?optimizer=gif&amp;width=640&amp;height=1380 640w,https://unicorn-images.b-cdn.net/01507aca-e796-4c17-9d6e-a2546864f67d?optimizer=gif&amp;width=415&amp;height=895 415w,https://unicorn-images.b-cdn.net/01507aca-e796-4c17-9d6e-a2546864f67d?optimizer=gif&amp;width=720&amp;height=1554 720w,https://unicorn-images.b-cdn.net/01507aca-e796-4c17-9d6e-a2546864f67d?optimizer=gif&amp;width=830&amp;height=1790 830w,https://unicorn-images.b-cdn.net/01507aca-e796-4c17-9d6e-a2546864f67d?optimizer=gif&amp;width=864&amp;height=1863 864w,https://unicorn-images.b-cdn.net/01507aca-e796-4c17-9d6e-a2546864f67d?optimizer=gif&amp;width=864&amp;height=1863 864w,"
+                                        sizes="(max-width: 320px) 360px,(max-width: 375px) 415px,(max-width: 425px) 465px,(max-width: 600px) 640px,415px"
+                                      
+                                    >
+                                
+                                <div class="posts-01__text">
+                                    <h3 class="def-18_72 title-text--inner posts-01__title"></h3>
+                                    <div class="content-text posts-01__info"></div>
+                                </div>
+                            </div>
+                        </a>
+                    
+				
+                    
+                        <a class="sh-4 card-container sh-has-hover posts-01__item" href="https://tinyadz.com/?ref=unicornplatform" target="_blank">
+                            <div class="posts-01__img_box">
+                                
+                                    
+                                    <img 
+                                      loading="lazy" 
+                                      alt="Post image" 
+                                      class="posts-01__img"
+
+                                      
+                                        src="https://unicorn-images.b-cdn.net/2b72a792-b47f-4df3-bbf9-8149772a1a45?optimizer=gif"
+                                        srcset="https://unicorn-images.b-cdn.net/2b72a792-b47f-4df3-bbf9-8149772a1a45?optimizer=gif&amp;width=360&amp;height=1120 360w,https://unicorn-images.b-cdn.net/2b72a792-b47f-4df3-bbf9-8149772a1a45?optimizer=gif&amp;width=415&amp;height=1291 415w,https://unicorn-images.b-cdn.net/2b72a792-b47f-4df3-bbf9-8149772a1a45?optimizer=gif&amp;width=465&amp;height=1447 465w,https://unicorn-images.b-cdn.net/2b72a792-b47f-4df3-bbf9-8149772a1a45?optimizer=gif&amp;width=640&amp;height=1991 640w,https://unicorn-images.b-cdn.net/2b72a792-b47f-4df3-bbf9-8149772a1a45?optimizer=gif&amp;width=415&amp;height=1291 415w,https://unicorn-images.b-cdn.net/2b72a792-b47f-4df3-bbf9-8149772a1a45?optimizer=gif&amp;width=720&amp;height=2240 720w,https://unicorn-images.b-cdn.net/2b72a792-b47f-4df3-bbf9-8149772a1a45?optimizer=gif&amp;width=830&amp;height=2582 830w,https://unicorn-images.b-cdn.net/2b72a792-b47f-4df3-bbf9-8149772a1a45?optimizer=gif&amp;width=930&amp;height=2894 930w,https://unicorn-images.b-cdn.net/2b72a792-b47f-4df3-bbf9-8149772a1a45?optimizer=gif&amp;width=1280&amp;height=3982 1280w,https://unicorn-images.b-cdn.net/2b72a792-b47f-4df3-bbf9-8149772a1a45?optimizer=gif&amp;width=830&amp;height=2582 830w,https://unicorn-images.b-cdn.net/2b72a792-b47f-4df3-bbf9-8149772a1a45?optimizer=gif&amp;width=1080&amp;height=3360 1080w,https://unicorn-images.b-cdn.net/2b72a792-b47f-4df3-bbf9-8149772a1a45?optimizer=gif&amp;width=1245&amp;height=3873 1245w,https://unicorn-images.b-cdn.net/2b72a792-b47f-4df3-bbf9-8149772a1a45?optimizer=gif&amp;width=1395&amp;height=4341 1395w,https://unicorn-images.b-cdn.net/2b72a792-b47f-4df3-bbf9-8149772a1a45?optimizer=gif&amp;width=1728&amp;height=5374 1728w,"
+                                        sizes="(max-width: 320px) 360px,(max-width: 375px) 415px,(max-width: 425px) 465px,(max-width: 600px) 640px,415px"
+                                      
+                                    >
+                                
+                                <div class="posts-01__text">
+                                    <h3 class="def-18_72 title-text--inner posts-01__title"></h3>
+                                    <div class="content-text posts-01__info"></div>
+                                </div>
+                            </div>
+                        </a>
+                    
+				
+                    
+                        <a class="sh-4 card-container sh-has-hover posts-01__item" href="https://mobile-app-modern.unicorntemplates.com/" target="_blank">
+                            <div class="posts-01__img_box">
+                                
+                                    
+                                    <img 
+                                      loading="lazy" 
+                                      alt="Post image" 
+                                      class="posts-01__img"
+
+                                      
+                                        src="https://unicorn-images.b-cdn.net/4f7fb38c-7369-4ad3-babc-64efcc853892?optimizer=gif"
+                                        srcset="https://unicorn-images.b-cdn.net/4f7fb38c-7369-4ad3-babc-64efcc853892?optimizer=gif&amp;width=360&amp;height=1380 360w,https://unicorn-images.b-cdn.net/4f7fb38c-7369-4ad3-babc-64efcc853892?optimizer=gif&amp;width=415&amp;height=1591 415w,https://unicorn-images.b-cdn.net/4f7fb38c-7369-4ad3-babc-64efcc853892?optimizer=gif&amp;width=465&amp;height=1783 465w,https://unicorn-images.b-cdn.net/4f7fb38c-7369-4ad3-babc-64efcc853892?optimizer=gif&amp;width=640&amp;height=2453 640w,https://unicorn-images.b-cdn.net/4f7fb38c-7369-4ad3-babc-64efcc853892?optimizer=gif&amp;width=415&amp;height=1591 415w,https://unicorn-images.b-cdn.net/4f7fb38c-7369-4ad3-babc-64efcc853892?optimizer=gif&amp;width=720&amp;height=2760 720w,https://unicorn-images.b-cdn.net/4f7fb38c-7369-4ad3-babc-64efcc853892?optimizer=gif&amp;width=817&amp;height=3131 817w,https://unicorn-images.b-cdn.net/4f7fb38c-7369-4ad3-babc-64efcc853892?optimizer=gif&amp;width=817&amp;height=3131 817w,"
+                                        sizes="(max-width: 320px) 360px,(max-width: 375px) 415px,(max-width: 425px) 465px,(max-width: 600px) 640px,415px"
+                                      
+                                    >
+                                
+                                <div class="posts-01__text">
+                                    <h3 class="def-18_72 title-text--inner posts-01__title"></h3>
+                                    <div class="content-text posts-01__info"></div>
+                                </div>
+                            </div>
+                        </a>
+                    
+				
+                    
+                        <a class="sh-4 card-container sh-has-hover posts-01__item" href="https://neon-dark-template.unicorntemplates.com/" target="_blank">
+                            <div class="posts-01__img_box">
+                                
+                                    
+                                    <img 
+                                      loading="lazy" 
+                                      alt="Post image" 
+                                      class="posts-01__img"
+
+                                      
+                                        src="https://unicorn-images.b-cdn.net/acddd871-d94b-4d76-b8b6-431b9d885308?optimizer=gif"
+                                        srcset="https://unicorn-images.b-cdn.net/acddd871-d94b-4d76-b8b6-431b9d885308?optimizer=gif&amp;width=360&amp;height=1015 360w,https://unicorn-images.b-cdn.net/acddd871-d94b-4d76-b8b6-431b9d885308?optimizer=gif&amp;width=415&amp;height=1170 415w,https://unicorn-images.b-cdn.net/acddd871-d94b-4d76-b8b6-431b9d885308?optimizer=gif&amp;width=465&amp;height=1311 465w,https://unicorn-images.b-cdn.net/acddd871-d94b-4d76-b8b6-431b9d885308?optimizer=gif&amp;width=640&amp;height=1804 640w,https://unicorn-images.b-cdn.net/acddd871-d94b-4d76-b8b6-431b9d885308?optimizer=gif&amp;width=415&amp;height=1170 415w,https://unicorn-images.b-cdn.net/acddd871-d94b-4d76-b8b6-431b9d885308?optimizer=gif&amp;width=720&amp;height=2030 720w,https://unicorn-images.b-cdn.net/acddd871-d94b-4d76-b8b6-431b9d885308?optimizer=gif&amp;width=830&amp;height=2340 830w,https://unicorn-images.b-cdn.net/acddd871-d94b-4d76-b8b6-431b9d885308?optimizer=gif&amp;width=930&amp;height=2622 930w,https://unicorn-images.b-cdn.net/acddd871-d94b-4d76-b8b6-431b9d885308?optimizer=gif&amp;width=953&amp;height=2685 953w,https://unicorn-images.b-cdn.net/acddd871-d94b-4d76-b8b6-431b9d885308?optimizer=gif&amp;width=953&amp;height=2685 953w,"
+                                        sizes="(max-width: 320px) 360px,(max-width: 375px) 415px,(max-width: 425px) 465px,(max-width: 600px) 640px,415px"
+                                      
+                                    >
+                                
+                                <div class="posts-01__text">
+                                    <h3 class="def-18_72 title-text--inner posts-01__title"></h3>
+                                    <div class="content-text posts-01__info"></div>
+                                </div>
+                            </div>
+                        </a>
+                    
+				
+                    
+                        <a class="sh-4 card-container sh-has-hover posts-01__item" href="https://contrast-mobile-app.unicorntemplates.com/" target="_blank">
+                            <div class="posts-01__img_box">
+                                
+                                    
+                                    <img 
+                                      loading="lazy" 
+                                      alt="Post image" 
+                                      class="posts-01__img"
+
+                                      
+                                        src="https://unicorn-images.b-cdn.net/32421ec4-8997-4cc8-85e5-7e2b7674bff1?optimizer=gif"
+                                        srcset="https://unicorn-images.b-cdn.net/32421ec4-8997-4cc8-85e5-7e2b7674bff1?optimizer=gif&amp;width=360&amp;height=1405 360w,https://unicorn-images.b-cdn.net/32421ec4-8997-4cc8-85e5-7e2b7674bff1?optimizer=gif&amp;width=415&amp;height=1620 415w,https://unicorn-images.b-cdn.net/32421ec4-8997-4cc8-85e5-7e2b7674bff1?optimizer=gif&amp;width=465&amp;height=1815 465w,https://unicorn-images.b-cdn.net/32421ec4-8997-4cc8-85e5-7e2b7674bff1?optimizer=gif&amp;width=640&amp;height=2497 640w,https://unicorn-images.b-cdn.net/32421ec4-8997-4cc8-85e5-7e2b7674bff1?optimizer=gif&amp;width=415&amp;height=1620 415w,https://unicorn-images.b-cdn.net/32421ec4-8997-4cc8-85e5-7e2b7674bff1?optimizer=gif&amp;width=720&amp;height=2810 720w,https://unicorn-images.b-cdn.net/32421ec4-8997-4cc8-85e5-7e2b7674bff1?optimizer=gif&amp;width=810&amp;height=3160 810w,https://unicorn-images.b-cdn.net/32421ec4-8997-4cc8-85e5-7e2b7674bff1?optimizer=gif&amp;width=810&amp;height=3160 810w,"
+                                        sizes="(max-width: 320px) 360px,(max-width: 375px) 415px,(max-width: 425px) 465px,(max-width: 600px) 640px,415px"
+                                      
+                                    >
+                                
+                                <div class="posts-01__text">
+                                    <h3 class="def-18_72 title-text--inner posts-01__title"></h3>
+                                    <div class="content-text posts-01__info"></div>
+                                </div>
+                            </div>
+                        </a>
+                    
+				
+			</div>
+      <div class="bottom_cta">
+        
+	
+
+
+      </div>
+		</div>
+	</div>
+
+
+      
+		</div>
+	</div>
+  
+    <style>
+      /* Heading */
+
+#posts-01-93491 .heading {
+    font-size: 3.2em;
+    line-height: 1.2;
+    margin: 0 0 0.2em 0;
+}
+
+#posts-01-93491 .title-box__text {
+      font-size: 1.2em;
+      max-width: 80%;
+      opacity: 1;
+}
+
+#posts-01-93491 .container--small {
+    max-width: 1200px;
+}
+
+#posts-01-93491 .container {
+    max-width: 80%;
+}
+
+#posts-01-93491 .title-box {
+    margin-bottom: 64px;
+    max-width: 800px;
+}
+
+#posts-01-93491 .posts-01__wrapper {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+}
+
+#posts-01-93491 .posts-01__item {
+    box-sizing: border-box;
+    height: 250px;
+    width: 100%;
+    min-width: 300px;
+    border-radius: 16px;
+    box-shadow: none;
+    margin: 0;
+    transition: border 0.3s ease, box-shadow .3s ease;
+}
+
+#posts-01-93491 .posts-01__item:hover {
+    border: 2px solid #943BDC;
+    box-shadow: 0 0 120px rgba(221, 147, 255, 0.5);
+    transform: none;
+}
+
+#posts-01-93491 img.posts-01__img:hover {
+    transform: translateY(-600px);
+}
+
+/* Buttons */
+
+#posts-01-93491 .button {
+    padding: 24px 64px 26px;
+    min-width: 180px;
+    min-height: 44px;
+    border-radius: 28px;
+    box-shadow: none;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+#posts-01-93491 .button:hover {
+    background-color: white;
+    color: #943BDC;
+    transform: translate(0, -6px);
+}
+
+#posts-01-93491 .button__text {
+    font-size: 20px;
+}
+
+#posts-01-93491 .buttons-set__list {
+    margin-left: 0;
+}
+
+#posts-01-93491 .bottom_cta .buttons-set {
+    margin-top: 40px;
+}
+
+@media (max-width: 1200px) {
+
+#posts-01-93491 .container {
+    max-width: 100%;
+}
+
+#posts-01-93491 .title-box {
+    max-width: 800px;
+}
+}
+
+@media (max-width: 768px) {
+
+#posts-01-93491 .heading {
+    font-size: 2.4em;
+}
+
+#posts-01-93491 .title-box__text {
+      font-size: 1em;
+}
+
+#posts-01-93491 .title-box__text {
+      max-width: 100%;
+}
+
+#posts-01-93491 .posts-01__wrapper {
+    grid-template-columns: repeat(1, 1fr);
+}
+}
+    </style>
+  
+  
+    <script>
+      (function() {
+document.getElementById('posts-01-93491').querySelectorAll('img').forEach((img) => {
+    img.removeAttribute("srcset");
+    img.removeAttribute("sizes");
+})
+})()
+    </script>
+  
+
+  
+  
+  
+  
+  
+  
+  
+  
+	<div 
+    class="page-component__bg_image_box    page-component__bg_image_box--dark-bg  bg-custom-color   bg-custom-color--dark  uni-is-dark-bg  cta_button-01-parent  is-not-first-component"
+    id="cta_button-01-19301"
+    
+    
+  >
+		
+		<div 
+      class="page-component__bg_overlay_box " 
+      style=" background-color: #943BDC;"
+    >
+			
+		</div>
+    
+		<div class="page-component__wrapper" style="z-index: 19;padding-top:120px;padding-bottom:120px;">
+      
+        
+	<div class="cta_button-01">
+		
+
+
+	
+	
+	<div class="container container--small">
+		<div class="title-box title-box--center">
+			
+				
+					<h2 class="title-text heading  text-white" >Ready to Launch Your Independent Project?</h2>
+				
+			
+			
+				<div class="subtitle-text title-box__text content_box  text-white"><p>Get your website up and running in minutes</p>
+</div>
+			
+		</div>
+	</div>
+
+
+		<div class="container container--small">
+			<div class="cta_button-01__button_box">
+				
+	
+<div class="buttons-set"><ul class="buttons-set__list"><li class="buttons-set__item"><a
+				 data-stripe-product-id="" data-stripe-mode="payment" data-successful-payment-url="" data-cancel-payment-url=""
+
+				 class="button button--white-bg " href="https://app.unicornplatform.com/auth/join" target="_self"   onclick="$tac(&#39;conversion&#39;, {   type: &#39;CTA_CLICK&#39; });"   ><span class="button__text">Start Now</span></a></li></ul></div>
+
+			</div>
+		</div>
+	</div>
+
+      
+		</div>
+	</div>
+  
+    <style>
+      /* Heading */
+
+#cta_button-01-19301 .heading {
+    font-size: 4em;
+    line-height: 1.2;
+    margin: 0 0 0.2em 0;
+}
+
+#cta_button-01-19301 .title-box__text {
+    font-size: 1.4em;
+    max-width: 80%;
+    opacity: 1;
+    text-align: center;
+    margin: 0 auto 40px;
+}
+
+#cta_button-01-19301 .title-box {
+    margin-bottom: 16px;
+}
+
+#cta_button-01-19301 .container--small {
+    max-width: 1200px;
+}
+
+/* Buttons */
+
+#cta_button-01-19301 .button {
+    padding: 64px 200px 72px;
+    background:rgba(255,255,255,0.7);
+    border-radius: 64px;
+    border: 6px solid rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(8px);
+    box-shadow: 0px 248px 113px rgba(0, 0, 0, 0.02), 0px 96px 159px rgba(0, 0, 0, 0.05), 0px 71px 71px rgba(0, 0, 0, 0.09), 0px 18px 39px rgba(0,0,0,0.1), inset 0px 48px 88px rgba(255,255,255,0.75);
+    color: #201C2F;
+}
+
+#cta_button-01-19301 .button:hover {
+    box-shadow: 0px 32px 14px rgba(0, 0, 0, 0.02), 0 17px 12px rgba(0, 0, 0, 0.05), 0 10px 10px rgba(0, 0, 0, 0.09), 0px 7px 12px rgba(0,0,0,0.1), inset 0 19px 24px rgba(255,255,255,0.75), 0 0 80px rgba(221, 147, 255, 0.5);
+   color:#943BDC;
+   background:rgba(255, 255, 255,0.8);
+   border: 6px solid rgba(255, 121, 161, 0.1);
+}
+
+#cta_button-01-19301 .button__text {
+    font-size: 72px;
+}
+
+
+@media (max-width: 768px) {
+#cta_button-01-19301 .heading {
+    font-size: 2.4em;
+}
+#cta_button-01-19301 .title-box__text {
+      max-width: 100%;
+}
+
+#cta_button-01-19301 .button {
+    padding: 30px 70px 34px;
+    border-radius: 32px;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0px 124px 57px rgba(0, 0, 0, 0.02), 0px 48px 80px rgba(0, 0, 0, 0.05), 0px 35px 35px rgba(0, 0, 0, 0.09), 0px 9px 20px rgba(0,0,0,0.1), inset 0px 24px 44px rgba(255,255,255,0.75);
+}
+
+#cta_button-01-19301 .button:hover {
+   border: 2px solid rgba(255, 121, 161, 0.1);
+   box-shadow: 0px 16px 7px rgba(0, 0, 0, 0.02), 0 8px 6px rgba(0, 0, 0, 0.05), 0 5px 5px rgba(0, 0, 0, 0.09), 0px 4px 6px rgba(0,0,0,0.1), inset 0 9px 12px rgba(255,255,255,0.75), 0 0 40px rgba(221, 147, 255, 0.5);
+}
+
+#cta_button-01-19301 .button__text {
+    font-size: 32px;
+}
+}
+    </style>
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+  
+	<div 
+    class="page-component__bg_image_box    bg-white-color   features-06-parent  is-not-first-component"
+    id="features-06-441881"
+    
+    
+  >
+		
+		<div 
+      class="page-component__bg_overlay_box " 
+      style=""
+    >
+			
+		</div>
+    
+		<div class="page-component__wrapper" style="z-index: 18;padding-top:120px;padding-bottom:40px;">
+      
+        
+
+
+
+	
+	
+	
+  
+	<div class="features-06 graphics-HTML default-graphics-image">
+		<div class="container container--large">
+			<div class="features-06__wrapper">
+				<div class="features-06__main">
+					<div class="features-06__main_content">
+						<div class="title-box">
+							
+								<h2 class="title-text heading features-06__heading " >Create a Website <span style="color:#943BDC">Quickly and Easily</span></h2>
+							
+							
+								<div class="subtitle-text title-box__text features-06__text content_box "><p>Unicorn Platform helps you create websites from scratch, with ready-made section templates or using entire site templates.</p>
+</div>
+							
+						</div>
+						
+	
+
+
+					</div>
+				</div>
+				<div class="features-06__visual">
+					<div class="features-06__img_box">
+            <div class="features-06__HTML graphics-HTML__code-snippet"><div id="videoBackground"><video style="object-fit: cover; background-size: cover; width: 100%; height: 100%; border-radius: 16px"  preload="auto" playsinline autoplay loop muted><source src="https://unicorn-s3.b-cdn.net/279339739-f8a3dc0b-bca7-4e87-97d4-c0a87e809df3.mp4" type="video/mp4"></video></div><script>
+$(document).ready(() => {
+  let width = $(window).width();
+  let height = $(window).height();
+  $("#videoBackground")
+    .width(width)
+    .height(height);
+});
+
+$(window).resize(() => {
+  let width = $(window).width();
+  let height = $(window).height();
+  $("#videoBackground")
+    .width(width)
+    .height(height);
+});
+</script></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+
+
+      
+		</div>
+	</div>
+  
+    <style>
+      #features-06-441881 .container--large {
+    max-width: 80%;
+    padding:0;
+}
+
+#features-06-441881 .heading {
+    max-width: 500px;
+    margin-bottom: 0.3em;
+    margin-top: 0;
+    font-size: 3.2em;
+    line-height: 1.2;
+    color: #201C2F;
+}
+
+#features-06-441881 .title-box__text {
+    opacity: 1;
+    max-width: 95%;
+    line-height: 1.6;
+    font-size: 1.2em;
+    color: #565564;
+}
+
+/* Buttons */
+
+#features-06-441881 .button {
+    padding: 24px 64px 26px;
+    min-width: 180px;
+    min-height: 44px;
+    border-radius: 28px;
+    box-shadow: none;
+    transition: background-color 0.1s ease, color 0.1s ease;
+}
+
+#features-06-441881 .button:hover {
+    background-color: #943BDC;
+    color: white;
+    transform: none;
+}
+
+#features-06-441881 .button__text {
+    font-size: 20px;
+}
+
+#features-06-441881 .buttons-set__list {
+    margin-left: 0;
+}
+
+@media (max-width: 1120px) {
+
+   #features-06-441881 .container--large {
+    max-width: 100%;
+    padding: 0 15px;
+}
+
+#features-06-441881 .page-component__wrapper {
+    padding-bottom: 100px!important;
+}
+
+#features-06-441881 .features-06__wrapper {
+    flex-direction: column;
+}
+
+#features-06-441881 .features-06__main {
+    padding: 0 15px 64px 15px;
+    width: 100%;
+}
+
+#features-06-441881 .features-06__main_content {
+    max-width: 750px;
+    margin: 0 auto;
+}
+
+#features-06-441881 .title-box {
+    max-width: 800px;
+    margin: 15px auto;
+}
+
+#features-06-441881 .heading {
+    max-width: 800px;
+    font-size: 4.2em;
+    text-align: center;
+    margin: 0 auto 0.3em auto;
+}
+
+#features-06-441881 .title-box__text {
+    font-size: 1.4em;
+    text-align: center;
+    margin: 0 auto;
+}
+
+#features-06-441881 .features-06__visual {
+    width: 100%;
+    padding: 0 15px;
+}
+
+#features-06-441881 .buttons-set__item {
+    display: flex;
+    vertical-align: middle;
+    width: 100%;
+    justify-content: center;
+    margin: 0;
+}
+
+#features-06-441881 .button {
+    margin: 0 auto;
+}
+}
+
+@media (max-width: 768px) {
+
+   #features-06-441881 .page-component__wrapper {
+    padding-bottom: 40px!important;
+}
+
+   #features-06-441881 .heading {
+    font-size: 2.4em;
+}
+
+#features-06-441881 .title-box__text {
+    font-size: 1em;
+}
+}
+    </style>
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+  
+	<div 
+    class="page-component__bg_image_box    bg-white-color   features-07-parent  is-not-first-component"
+    id="features-07-182641"
+    
+    
+  >
+		
+		<div 
+      class="page-component__bg_overlay_box " 
+      style=""
+    >
+			
+		</div>
+    
+		<div class="page-component__wrapper" style="z-index: 17;padding-top:40px;padding-bottom:40px;">
+      
+        
+
+
+
+	
+	
+	
+  
+	<div class="features-07 graphics-HTML default-graphics-image">
+		<div class="container container--large">
+			<div class="features-07__wrapper">
+				<div class="features-07__main">
+					<div class="features-07__main_content">
+						<div class="title-box">
+							
+								<h2 class="title-text heading features-07__heading " >Effortless Content <span style="color:#943BDC">Customization</span></h2>
+							
+							
+								<div class="subtitle-text title-box__text features-07__text content_box "><p>Shape your website's content while retaining responsive design for all screen sizes</p>
+</div>
+							
+						</div>
+						
+	
+
+
+					</div>
+				</div>
+				<div class="features-07__visual">
+					<div class="features-07__img_box">
+            <div class="features-07__HTML graphics-HTML__code-snippet"><div id="videoBackground"><video style="object-fit: cover; background-size: cover; width: 100%; height: 100%; border-radius: 24px"  preload="auto" playsinline autoplay loop muted><source src="https://unicorn-s3.b-cdn.net/279339985-44a18a9e-ba64-4cd0-ae44-307b0ae5ab55.mp4" type="video/mp4"></video></div><script>
+$(document).ready(() => {
+  let width = $(window).width();
+  let height = $(window).height();
+  $("#videoBackground")
+    .width(width)
+    .height(height);
+});
+
+$(window).resize(() => {
+  let width = $(window).width();
+  let height = $(window).height();
+  $("#videoBackground")
+    .width(width)
+    .height(height);
+});
+</script></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+  
+
+
+
+
+
+      
+		</div>
+	</div>
+  
+    <style>
+      #features-07-182641 .container--large {
+    max-width: 80%;
+    padding:0;
+}
+
+#features-07-182641 .heading {
+    max-width: 500px;
+    margin-bottom: 0.3em;
+    margin-top: 0;
+    font-size: 3.2em;
+    line-height: 1.2;
+    color: #201C2F;
+}
+
+#features-07-182641 .title-box__text {
+    opacity: 1;
+    max-width: 95%;
+    line-height: 1.6;
+    font-size: 1.2em;
+    color: #565564;
+}
+
+/* Buttons */
+
+#features-07-182641 .button {
+    padding: 24px 64px 26px;
+    min-width: 180px;
+    min-height: 44px;
+    border-radius: 28px;
+    box-shadow: none;
+    transition: background-color 0.1s ease, color 0.1s ease;
+}
+
+#features-07-182641 .button:hover {
+    background-color: #943BDC;
+    color: white;
+    transform: none;
+}
+
+#features-07-182641 .button__text {
+    font-size: 22px;
+}
+
+#features-07-182641 .buttons-set__list {
+    margin-left: 0;
+}
+
+#features-07-182641 .features-07__main {
+    padding-left: 100px;
+}
+
+@media (max-width: 1120px) {
+   #features-07-182641 .container--large {
+    max-width: 100%;
+    padding: 0 15px;
+}
+
+#features-07-182641 .page-component__wrapper {
+    padding-bottom: 100px!important;
+}
+
+#features-07-182641 .features-07__wrapper {
+    flex-direction: column;
+}
+
+#features-07-182641 .features-07__main {
+    padding: 0 15px 64px 15px;
+    width: 100%;
+}
+
+#features-07-182641 .features-07__main_content {
+    max-width: 750px;
+    margin: 0 auto;
+}
+
+#features-07-182641 .title-box {
+    max-width: 800px;
+    margin: 15px auto;
+}
+
+#features-07-182641 .heading {
+    max-width: 800px;
+    font-size: 4.2em;
+    text-align: center;
+    margin: 0 auto 0.3em auto;
+}
+
+#features-07-182641 .title-box__text {
+    font-size: 1.4em;
+    text-align: center;
+    margin: 0 auto;
+}
+
+#features-07-182641 .features-07__visual {
+    width: 100%;
+    padding: 0 15px;
+}
+
+#features-07-182641 .buttons-set__item {
+    display: flex;
+    vertical-align: middle;
+    width: 100%;
+    justify-content: center;
+    margin: 0;
+}
+
+#features-07-182641 .button {
+    margin: 0 auto;
+}
+
+}
+
+@media (max-width: 768px) {
+
+   #features-07-182641 .page-component__wrapper {
+    padding-bottom: 40px!important;
+}
+
+   #features-07-182641 .heading {
+    font-size: 2.4em;
+}
+
+#features-07-182641 .title-box__text {
+    font-size: 1em;
+}
+}
+    </style>
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+  
+	<div 
+    class="page-component__bg_image_box    bg-white-color   features-06-parent  is-not-first-component"
+    id="features-06-293761"
+    
+    
+  >
+		
+		<div 
+      class="page-component__bg_overlay_box " 
+      style=""
+    >
+			
+		</div>
+    
+		<div class="page-component__wrapper" style="z-index: 16;padding-top:40px;padding-bottom:100px;">
+      
+        
+
+
+
+	
+	
+	
+  
+	<div class="features-06 graphics-HTML default-graphics-image">
+		<div class="container container--large">
+			<div class="features-06__wrapper">
+				<div class="features-06__main">
+					<div class="features-06__main_content">
+						<div class="title-box">
+							
+								<h2 class="title-text heading features-06__heading " ><span style="color:#943BDC">AI Co-Pilot:</span> Your Web Design Assistant</h2>
+							
+							
+								<div class="subtitle-text title-box__text features-06__text content_box "><p>From building to enhancing, let AI take your website to the next level.</p>
+</div>
+							
+						</div>
+						
+	
+<div class="buttons-set"><ul class="buttons-set__list"><li class="buttons-set__item"><a
+				 data-stripe-product-id="" data-stripe-mode="payment" data-successful-payment-url="" data-cancel-payment-url=""
+
+				 class="button button--accent-outline " href="https://app.unicornplatform.com/auth/join" target="_self"   onclick="$tac(&#39;conversion&#39;, {   type: &#39;CTA_CLICK&#39; });"   ><span class="button__text">Try Now</span></a></li></ul></div>
+
+					</div>
+				</div>
+				<div class="features-06__visual">
+					<div class="features-06__img_box">
+            <div class="features-06__HTML graphics-HTML__code-snippet"><div id="videoBackground"><video style="object-fit: cover; background-size: cover; width: 100%; height: 100%; border-radius: 24px"  preload="auto" playsinline autoplay loop muted><source src="https://unicorn-s3.b-cdn.net/279340113-851d6141-bffd-4b0d-9f66-4143be3db140.mp4" type="video/mp4"></video></div><script>
+$(document).ready(() => {
+  let width = $(window).width();
+  let height = $(window).height();
+  $("#videoBackground")
+    .width(width)
+    .height(height);
+});
+
+$(window).resize(() => {
+  let width = $(window).width();
+  let height = $(window).height();
+  $("#videoBackground")
+    .width(width)
+    .height(height);
+});
+</script></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+
+
+      
+		</div>
+	</div>
+  
+    <style>
+      #features-06-293761 .container--large {
+    max-width: 80%;
+    padding:0;
+}
+
+#features-06-293761 .heading {
+    max-width: 550px;
+    margin-bottom: 0.3em;
+    margin-top: 0;
+    font-size: 3.2em;
+    line-height: 1.2;
+    color: #201C2F;
+}
+
+#features-06-293761 .title-box__text {
+    opacity: 1;
+    max-width: 95%;
+    line-height: 1.6;
+    font-size: 1.2em;
+    color: #565564;
+}
+
+/* Buttons */
+
+#features-06-293761 .button {
+    padding: 24px 64px 26px;
+    min-width: 180px;
+    min-height: 44px;
+    border-radius: 28px;
+    box-shadow: none;
+    transition: all .2s ease;
+}
+
+#features-06-293761 .button:hover {
+    background-color: var(--primary);
+    color: white;
+    transform: none;
+}
+
+#features-06-293761 .button__text {
+    font-size: 20px;
+}
+
+#features-06-293761 .buttons-set__list {
+    margin-left: 0;
+}
+
+@media (max-width: 1120px) {
+   #features-06-293761 .container--large {
+    max-width: 100%;
+    padding: 0 15px;
+}
+#features-06-293761 .features-06__wrapper {
+    flex-direction: column;
+}
+
+#features-06-293761 .features-06__main {
+    padding: 0 15px 64px 15px;
+    width: 100%;
+}
+
+#features-06-293761 .features-06__main_content {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+#features-06-293761 .title-box {
+    max-width: 800px;
+    margin: 15px auto;
+}
+
+#features-06-293761 .heading {
+    max-width: 800px;
+    font-size: 4.2em;
+    text-align: center;
+    margin: 0 auto 0.3em auto;
+}
+
+#features-06-293761 .title-box__text {
+    font-size: 1.4em;
+    text-align: center;
+    margin: 0 auto;
+}
+
+#features-06-293761 .features-06__visual {
+    width: 100%;
+    padding: 0 15px;
+}
+
+#features-06-293761 .buttons-set__item {
+    display: flex;
+    vertical-align: middle;
+    width: 100%;
+    justify-content: center;
+    margin: 0;
+}
+
+#features-06-293761 .button {
+    margin: 0 auto;
+}
+}
+
+@media (max-width: 768px) {
+
+   #features-06-293761 .page-component__wrapper {
+    padding-bottom: 0px!important;
+}
+
+   #features-06-293761 .heading {
+    font-size: 2.4em;
+}
+
+   #features-06-293761 .title-box__text {
+    font-size: 1em;
+}
+}
+    </style>
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+  
+	<div 
+    class="page-component__bg_image_box    page-component__bg_image_box--dark-bg  bg-custom-color   bg-custom-color--dark  uni-is-dark-bg  clients-01-parent  is-not-first-component"
+    id="clients-01-338911"
+    
+    
+  >
+		
+		<div 
+      class="page-component__bg_overlay_box " 
+      style=" background-color: #943BDC;"
+    >
+			
+		</div>
+    
+		<div class="page-component__wrapper" style="z-index: 15;padding-top: 1px;padding-bottom: 1px;">
+      
+        
+	
+  
+	<div class="clients-01">
+		
+
+
+	
+	
+	<div class="container container--small">
+		<div class="title-box title-box--center">
+			
+				
+					<h2 class="title-text heading  text-white" >We Help Real People to Build Their Business</h2>
+				
+			
+			
+		</div>
+	</div>
+
+
+		<div class="container container--premid">
+			<ul class="clients-01__list">
+				
+					
+            
+						<li class="clients-01__item">
+							
+								<a class="clients-01__link" href="https://www.producthunt.com/products/unicorn-platform/awards" target="_blank">
+									
+
+	
+		<img loading="lazy"
+      alt="1st place"
+			class=""
+			height="100"
+
+      
+        src="https://unicorn-images.b-cdn.net/e35ede64-b8c1-4715-823a-cedddf6a4d08?optimizer=gif"
+        srcset="https://unicorn-images.b-cdn.net/e35ede64-b8c1-4715-823a-cedddf6a4d08?optimizer=gif&amp;width=133&amp;height=100 133w,https://unicorn-images.b-cdn.net/e35ede64-b8c1-4715-823a-cedddf6a4d08?optimizer=gif&amp;width=148&amp;height=112 148w,https://unicorn-images.b-cdn.net/e35ede64-b8c1-4715-823a-cedddf6a4d08?optimizer=gif&amp;width=148&amp;height=112 148w,"
+        sizes="133px"
+      
+		/>
+	
+
+
+								</a>
+							
+						</li>
+					
+				
+					
+            
+						<li class="clients-01__item">
+							
+								<a class="clients-01__link" href="https://www.g2.com/products/unicorn-platform/reviews" target="_blank">
+									
+
+	
+		<img loading="lazy"
+      alt="G2"
+			class=""
+			height="100"
+
+      
+        src="https://unicorn-images.b-cdn.net/bbe288c9-127e-46f6-80b6-c0c2c98c39f4?optimizer=gif"
+        srcset="https://unicorn-images.b-cdn.net/bbe288c9-127e-46f6-80b6-c0c2c98c39f4?optimizer=gif&amp;width=144&amp;height=100 144w,https://unicorn-images.b-cdn.net/bbe288c9-127e-46f6-80b6-c0c2c98c39f4?optimizer=gif&amp;width=161&amp;height=112 161w,https://unicorn-images.b-cdn.net/bbe288c9-127e-46f6-80b6-c0c2c98c39f4?optimizer=gif&amp;width=161&amp;height=112 161w,"
+        sizes="144px"
+      
+		/>
+	
+
+
+								</a>
+							
+						</li>
+					
+				
+					
+            
+						<li class="clients-01__item">
+							
+								<a class="clients-01__link" href="https://www.producthunt.com/products/unicorn-platform/awards" target="_blank">
+									
+
+	
+		<img loading="lazy"
+      alt="2nd place"
+			class=""
+			height="100"
+
+      
+        src="https://unicorn-images.b-cdn.net/d6a6e599-032f-4866-a18b-3ba5a17a79f7?optimizer=gif"
+        srcset="https://unicorn-images.b-cdn.net/d6a6e599-032f-4866-a18b-3ba5a17a79f7?optimizer=gif&amp;width=144&amp;height=100 144w,https://unicorn-images.b-cdn.net/d6a6e599-032f-4866-a18b-3ba5a17a79f7?optimizer=gif&amp;width=161&amp;height=112 161w,https://unicorn-images.b-cdn.net/d6a6e599-032f-4866-a18b-3ba5a17a79f7?optimizer=gif&amp;width=161&amp;height=112 161w,"
+        sizes="144px"
+      
+		/>
+	
+
+
+								</a>
+							
+						</li>
+					
+				
+					
+            
+						<li class="clients-01__item">
+							
+								<a class="clients-01__link" href="https://www.trustpilot.com/review/unicornplatform.com" target="_blank">
+									
+
+	
+		<img loading="lazy"
+      alt="Trustpilot"
+			class=""
+			height="100"
+
+      
+        src="https://unicorn-images.b-cdn.net/14073779-9247-440e-9216-40fa35bf639a?optimizer=gif"
+        srcset="https://unicorn-images.b-cdn.net/14073779-9247-440e-9216-40fa35bf639a?optimizer=gif&amp;width=144&amp;height=100 144w,https://unicorn-images.b-cdn.net/14073779-9247-440e-9216-40fa35bf639a?optimizer=gif&amp;width=161&amp;height=112 161w,https://unicorn-images.b-cdn.net/14073779-9247-440e-9216-40fa35bf639a?optimizer=gif&amp;width=161&amp;height=112 161w,"
+        sizes="144px"
+      
+		/>
+	
+
+
+								</a>
+							
+						</li>
+					
+				
+					
+            
+						<li class="clients-01__item">
+							
+								<a class="clients-01__link" href="https://www.producthunt.com/products/unicorn-platform" target="_blank">
+									
+
+	
+		<img loading="lazy"
+      alt="Ph"
+			class=""
+			height="100"
+
+      
+        src="https://unicorn-images.b-cdn.net/2b180c21-e8a1-4592-b29b-51cb40c9ff68?optimizer=gif"
+        srcset="https://unicorn-images.b-cdn.net/2b180c21-e8a1-4592-b29b-51cb40c9ff68?optimizer=gif&amp;width=144&amp;height=100 144w,https://unicorn-images.b-cdn.net/2b180c21-e8a1-4592-b29b-51cb40c9ff68?optimizer=gif&amp;width=161&amp;height=112 161w,https://unicorn-images.b-cdn.net/2b180c21-e8a1-4592-b29b-51cb40c9ff68?optimizer=gif&amp;width=161&amp;height=112 161w,"
+        sizes="144px"
+      
+		/>
+	
+
+
+								</a>
+							
+						</li>
+					
+				
+			</ul>
+			<div class="bottom_cta">
+				
+	
+
+
+			</div>
+		</div>
+	</div>
+
+
+      
+		</div>
+	</div>
+  
+    <style>
+      /* Heading */
+
+#clients-01-338911 .heading {
+    font-size: 2.2em;
+    line-height: 1.2;
+}
+
+#clients-01-338911 .page-component__bg_overlay_box {
+     width: 80%;
+     margin-left: auto;
+     margin-right: auto;
+     border-radius: 48px;
+}
+
+#clients-01-338911 .page-component__wrapper {
+    width: 80%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+@media (max-width: 1360px) {
+
+#clients-01-338911 .page-component__bg_image_box {
+    margin: 0 16px;
+}
+
+   #clients-01-338911 .page-component__bg_overlay_box {
+     width: 100%;
+}
+
+#clients-01-338911 .page-component__wrapper {
+    width: 100%;
+}
+}
+
+#clients-01-338911 .clients-01 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 40px 40px;
+    gap:40px;
+}
+
+#clients-01-338911 .container--small {
+    max-width: 250px;
+    margin: 0;
+    padding: 0;
+}
+
+#clients-01-338911 .container {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    flex-direction: row;
+    align-items: center;
+}
+
+#clients-01-338911 .container--premid {
+    max-width: 950px;
+}
+
+#clients-01-338911 .title-box--center {
+    margin: 0;
+    text-align: start;
+}
+
+#clients-01-338911 .clients-01__list {
+    margin: -16px auto -16px auto;
+}
+
+
+#clients-01-338911 .clients-01__item {
+    margin-bottom: 16px;
+    margin-top:16px;
+    border-radius: 24px;
+    transition: transform 0.3s ease;
+}
+
+#clients-01-338911 .clients-01__item:hover {
+    transform: translate(0, -8px);
+}
+
+@media (max-width: 920px) {
+    #clients-01-338911 .clients-01 {
+          flex-direction: column;
+          align-items: center;
+}
+
+   #clients-01-338911 .title-box--center {
+         text-align: center;
+}
+
+#clients-01-338911 .container--small {
+    max-width: 400px;
+}
+
+#clients-01-338911 .heading {
+    font-size: 2.5em;
+}
+
+}
+    </style>
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+  
+	<div 
+    class="page-component__bg_image_box    bg-white-color   other-01-parent  is-not-first-component"
+    id="other-01-323501"
+    
+    
+  >
+		
+		<div 
+      class="page-component__bg_overlay_box " 
+      style=""
+    >
+			
+		</div>
+    
+		<div class="page-component__wrapper" style="z-index: 14;padding-top:0px;padding-bottom:0px;">
+      
+        
+	
+	
+	<section>
+		
+
+
+
+
+		<style>
+.posts-01__text{display: none;}
+.posts-01__img{height:auto;
+transition: 2s cubic-bezier(0.67, 0.17, 0, 0.94) transform}
+img.posts-01__img:hover{
+    transform: translateY(-213px);
+}
+</style>
+
+
+	</section>
+
+      
+		</div>
+	</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+  
+	<div 
+    class="page-component__bg_image_box    bg-white-color   features-03-parent  is-not-first-component"
+    id="features-03-255271"
+    
+    
+  >
+		
+		<div 
+      class="page-component__bg_overlay_box " 
+      style=""
+    >
+			
+		</div>
+    
+		<div class="page-component__wrapper" style="z-index: 13;padding-top:120px;padding-bottom:20px;">
+      
+        
+	
+	
+  
+	<div class="features-03">
+		
+
+
+	
+	
+	<div class="container container--small">
+		<div class="title-box title-box--center">
+			
+				
+					<h2 class="title-text heading " >Wall Of <span style="color:#943BDC">Love</span></h2>
+				
+			
+			
+				<div class="subtitle-text title-box__text content_box "><p>Discover success stories and experiences with Unicorn Platform&nbsp;&nbsp;</p>
+</div>
+			
+		</div>
+	</div>
+
+
+		<div class="container">
+			<ul class="features-03__items">
+				
+			</ul>
+			<div class="bottom_cta">
+				
+	
+
+
+			</div>
+		</div>
+	</div>
+
+
+      
+		</div>
+	</div>
+  
+    <style>
+      /* Heading */
+
+#features-03-255271 .heading {
+    font-size: 3.6em;
+    line-height: 1.2;
+    margin: 0 0 0.2em 0;
+}
+
+#features-03-255271 .content_box p {
+      font-size: 1.2em;
+      max-width: 80%;
+      opacity: 1;
+      margin-left: auto;
+      margin-right: auto;
+}
+
+#features-03-255271 .header-39__text_box {
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (max-width: 1120px) {
+
+#features-03-255271 .title-box {
+    max-width: 800px;
+}
+
+#features-03-255271 .heading {
+    font-size: 4.2em;
+}
+
+#features-03-255271 .title-box__text {
+    font-size: 1.4em;
+}
+}
+
+
+@media (max-width: 768px) {
+
+#features-03-255271 .heading {
+    font-size: 2.4em;
+}
+
+#features-03-255271 .content_box p {
+      max-width: 100%;
+      font-size: 1em;
+}
+}
+
+#features-03-255271 .container--small {
+    max-width: 1200px;
+}
+
+#features-03-255271 .container {
+    max-width: 80%;
+}
+    </style>
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+  
+	<div 
+    class="page-component__bg_image_box    bg-white-color   other-01-parent  is-not-first-component"
+    id="other-01-761061"
+    
+    
+  >
+		
+		<div 
+      class="page-component__bg_overlay_box " 
+      style=""
+    >
+			
+		</div>
+    
+		<div class="page-component__wrapper" style="z-index: 12;padding-top:20px;padding-bottom:140px;">
+      
+        
+	
+	
+	<section>
+		
+
+
+
+
+		<div class="senja-embed" data-id="d41c0ec5-3338-4600-ab57-d127bac1bafb" data-lazyload="false"></div>
+<script async type="text/javascript" src="https://static.senja.io/dist/platform.js"></script>
+	</section>
+
+      
+		</div>
+	</div>
+  
+    <style>
+      #other-01-761061 .sj-card {
+    box-shadow: none;
+    border-radius: 24px;
+    font-family: var(--font);
+}
+
+#other-01-761061 .sj-text-card {
+    padding: 24px;
+    border-width: var(--border-width);
+    box-shadow: none;
+    border-color: rgb(238 238 245);
+    border-radius: 24px;
+}
+
+#other-01-761061 .senja-embed :is(.w-80) {
+    width: 400px;
+}
+
+#other-01-761061 .sj-endorser-name {
+    color: #201C2F;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 1.4;
+}
+
+#other-01-761061 .sj-desc {
+    color: #565564;
+    font-size: 14px;
+    line-height: 18px;
+}
+
+#other-01-761061 .sj-card .sj-content a {
+    color: #943BDC;
+}
+
+#other-01-761061 .senja-embed button {
+    margin-top: 24px!important;
+    color: #943BDC;
+    opacity: 1!important;
+    font-size: 18px;
+}
+
+#other-01-761061 .senja-embed :is(.my-1) {
+    margin-top: 8px;
+}
+
+#other-01-761061 .senja-embed :is(.justify-end) {
+    justify-content: center;
+}
+    </style>
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+  
+	<div 
+    class="page-component__bg_image_box    bg-white-color   other-01-parent  is-not-first-component"
+    id="other-01-462751"
+    
+    
+  >
+		
+		<div 
+      class="page-component__bg_overlay_box " 
+      style=""
+    >
+			
+		</div>
+    
+		<div class="page-component__wrapper" style="z-index: 11;padding-top:0px;padding-bottom:0px;">
+      
+        
+	
+	
+	<section>
+		
+
+
+
+
+		<style>
+.posts-01__text{display: none;}
+.posts-01__img{height:auto;
+transition: 2s cubic-bezier(0.67, 0.17, 0, 0.94) transform}
+img.posts-01__img:hover{
+    transform: translateY(-213px);
+}
+</style>
+	</section>
+
+      
+		</div>
+	</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+  
+	<div 
+    class="page-component__bg_image_box    page-component__bg_image_box--dark-bg  bg-custom-color   bg-custom-color--dark  uni-is-dark-bg  cta_button-01-parent  is-not-first-component"
+    id="cta_button-01-623471"
+    
+    
+  >
+		
+		<div 
+      class="page-component__bg_overlay_box " 
+      style=" background-color: #943BDC;"
+    >
+			
+		</div>
+    
+		<div class="page-component__wrapper" style="z-index: 10;padding-top:100px;padding-bottom:100px;">
+      
+        
+	<div class="cta_button-01">
+		
+
+
+	
+	
+	<div class="container container--small">
+		<div class="title-box title-box--center">
+			
+				
+					<h2 class="title-text heading  text-white" >Ready to Kickstart Your Website?</h2>
+				
+			
+			
+		</div>
+	</div>
+
+
+		<div class="container container--small">
+			<div class="cta_button-01__button_box">
+				
+	
+<div class="buttons-set"><ul class="buttons-set__list"><li class="buttons-set__item"><a
+				 data-stripe-product-id="" data-stripe-mode="payment" data-successful-payment-url="" data-cancel-payment-url=""
+
+				 class="button button--white-bg " href="https://app.unicornplatform.com/auth/join" target="_self"   onclick="$tac(&#39;conversion&#39;, {   type: &#39;CTA_CLICK&#39; });"   ><span class="button__text">Launch Now!</span></a></li></ul></div>
+
+			</div>
+		</div>
+	</div>
+
+      
+		</div>
+	</div>
+  
+    <style>
+      /* Heading */
+
+#cta_button-01-623471 .heading {
+    font-size: 4em;
+    line-height: 1.2;
+    margin: 0 0 0.5em 0;
+}
+
+#cta_button-01-623471 .title-box__text {
+    font-size: 1.4em;
+    max-width: 80%;
+    opacity: 1;
+    text-align: center;
+    margin: 0 auto 40px;
+}
+
+#cta_button-01-623471 .title-box {
+    margin-bottom: 16px;
+}
+
+#cta_button-01-623471 .container--small {
+    max-width: 1200px;
+}
+
+/* Buttons */
+
+#cta_button-01-623471 .button {
+    padding: 64px 200px 72px;
+    background:rgba(255,255,255,0.7);
+    border-radius: 64px;
+    border: 6px solid rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(8px);
+    box-shadow: 0px 248px 113px rgba(0, 0, 0, 0.02), 0px 96px 159px rgba(0, 0, 0, 0.05), 0px 71px 71px rgba(0, 0, 0, 0.09), 0px 18px 39px rgba(0,0,0,0.1), inset 0px 48px 88px rgba(255,255,255,0.75);
+    color: #201C2F;
+}
+
+#cta_button-01-623471 .button:hover {
+    box-shadow: 0px 32px 14px rgba(0, 0, 0, 0.02), 0 17px 12px rgba(0, 0, 0, 0.05), 0 10px 10px rgba(0, 0, 0, 0.09), 0px 7px 12px rgba(0,0,0,0.1), inset 0 19px 24px rgba(255,255,255,0.75), 0 0 80px rgba(221, 147, 255, 0.5);
+   color:#943BDC;
+   background:rgba(255, 255, 255,0.8);
+   border: 6px solid rgba(255, 121, 161, 0.1);
+}
+
+#cta_button-01-623471 .button__text {
+    font-size: 72px;
+}
+
+
+@media (max-width: 768px) {
+#cta_button-01-623471 .heading {
+    font-size: 2.4em;
+}
+#cta_button-01-623471 .title-box__text {
+      max-width: 100%;
+}
+
+#cta_button-01-623471 .button {
+    padding: 30px 70px 34px;
+    border-radius: 32px;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0px 124px 57px rgba(0, 0, 0, 0.02), 0px 48px 80px rgba(0, 0, 0, 0.05), 0px 35px 35px rgba(0, 0, 0, 0.09), 0px 9px 20px rgba(0,0,0,0.1), inset 0px 24px 44px rgba(255,255,255,0.75);
+}
+
+#cta_button-01-623471 .button:hover {
+   border: 2px solid rgba(255, 121, 161, 0.1);
+   box-shadow: 0px 16px 7px rgba(0, 0, 0, 0.02), 0 8px 6px rgba(0, 0, 0, 0.05), 0 5px 5px rgba(0, 0, 0, 0.09), 0px 4px 6px rgba(0,0,0,0.1), inset 0 9px 12px rgba(255,255,255,0.75), 0 0 40px rgba(221, 147, 255, 0.5);
+}
+
+#cta_button-01-623471 .button__text {
+    font-size: 32px;
+}
+}
+    </style>
+  
+  
+
+
+	
+	
+	
+	
+	
+  
+  
+  
+	<div 
+    class="popup-component js-custom-popup page-component__bg_image_box    bg-white-color   popup-01-parent is-not-first-component"
+    id="popup-01-31008"
+    
+    
+  >
+		<button class="popup-component__close-button js-close-custom-popup-button">
+			<svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<path d="M20.0806 17.9986L30.6275 5.42673C30.8043 5.2178 30.6556 4.90039 30.3824 4.90039H27.1762C26.9873 4.90039 26.8065 4.98477 26.682 5.12941L17.9833 15.4995L9.28465 5.12941C9.16411 4.98477 8.98331 4.90039 8.79045 4.90039H5.5842C5.31099 4.90039 5.16233 5.2178 5.33911 5.42673L15.886 17.9986L5.33911 30.5705C5.29951 30.6171 5.2741 30.674 5.26591 30.7346C5.25771 30.7952 5.26708 30.8568 5.29288 30.9122C5.31869 30.9677 5.35985 31.0145 5.41149 31.0472C5.46313 31.0799 5.52307 31.0972 5.5842 31.0968H8.79045C8.97929 31.0968 9.16009 31.0124 9.28465 30.8678L17.9833 20.4977L26.682 30.8678C26.8025 31.0124 26.9833 31.0968 27.1762 31.0968H30.3824C30.6556 31.0968 30.8043 30.7794 30.6275 30.5705L20.0806 17.9986Z" fill="white"/>
+			</svg>				
+		</button>
+		<div class="popup-component__bg_image_box">
+			
+			
+			<div 
+        class="page-component__bg_overlay_box "
+        style=""
+      >
+				
+			</div>
+			
+			<div class="page-component__wrapper" style="z-index: 10;padding-top: 1px;padding-bottom: 1px;">
+				
+
+
+
+    
+    
+    
+    
+    <div class="popup-01 graphics-image default-graphics-image">
+        <div class="container container--premid popup-01__container">
+            <div class="popup-01__left">
+                <div class="popup-01__content">
+                    
+                        <h2 class="title-text heading popup-01__heading">Thanks!</h2>
+                    
+                    
+                        <p class="subtitle-text content_box popup-01__text"><p>Your interest means the world to us. <br><br>We'll keep you posted on our progress, and when we're ready to launch, you'll be among the first to know. <br><br>Stay tuned for exciting updates!</p>
+</p>
+                    
+                    <div class="popup-01__cta-box">
+                        
+	
+
+
+                    </div>
+                </div>
+            </div>
+            
+              
+              
+                <div class="popup-01__right">
+                  <img 
+                    loading="lazy" 
+                    class="popup-01__img" 
+                    alt="0d078366 ec10 4b5f 82cd 49f77ef3f864 0"
+
+                    
+                      src="https://unicorn-images.b-cdn.net/90e4256f-ab39-491a-8373-0c4427138500?optimizer=gif"
+                      srcset="https://unicorn-images.b-cdn.net/90e4256f-ab39-491a-8373-0c4427138500?optimizer=gif&amp;width=256&amp;height=256 256w,https://unicorn-images.b-cdn.net/90e4256f-ab39-491a-8373-0c4427138500?optimizer=gif&amp;width=311&amp;height=311 311w,https://unicorn-images.b-cdn.net/90e4256f-ab39-491a-8373-0c4427138500?optimizer=gif&amp;width=361&amp;height=361 361w,https://unicorn-images.b-cdn.net/90e4256f-ab39-491a-8373-0c4427138500?optimizer=gif&amp;width=436&amp;height=436 436w,https://unicorn-images.b-cdn.net/90e4256f-ab39-491a-8373-0c4427138500?optimizer=gif&amp;width=600&amp;height=600 600w,https://unicorn-images.b-cdn.net/90e4256f-ab39-491a-8373-0c4427138500?optimizer=gif&amp;width=1000&amp;height=1000 1000w,https://unicorn-images.b-cdn.net/90e4256f-ab39-491a-8373-0c4427138500?optimizer=gif&amp;width=512&amp;height=512 512w,https://unicorn-images.b-cdn.net/90e4256f-ab39-491a-8373-0c4427138500?optimizer=gif&amp;width=512&amp;height=512 512w,"
+                      sizes="(max-width: 320px) 256px,(max-width: 375px) 311px,(max-width: 425px) 361px,(max-width: 500px) 436px,(max-width: 768px) 600px,1000px"
+                    
+                  />
+                </div>
+              
+            
+        </div>
+    </div>
+
+
+
+
+
+			</div>
+		</div>
+	</div>
+  
+  
+
+
+	
+
+
+
+
+
+
+
+
+
+    
+	
+	
+        
+        <div class="bg-custom-color">
+            <footer 
+              class="footer-04 footer-04--dark"
+              id="footer"
+              style="background-color: #201C2F;"
+              
+            >
+                <div class="footer-04__top">
+                    <div class="container">
+                        <div class="footer-04__top_wrapper  text-white ">
+                            
+                                
+	
+  
+	<div class="footer-04__col">
+		
+			<a class="footer-04__logo_link" href="/" target="_self">
+        
+				
+
+	
+		<img loading="lazy"
+      alt="Unicorn Platform logo"
+			class="footer-04__logo"
+			height="48"
+
+      
+        src="https://unicorn-images.b-cdn.net/7dcabea3-9657-4d11-9487-f7444d349c9d?optimizer=gif"
+        
+        
+      
+		/>
+	
+
+
+			</a>
+		
+		
+			<div class="content-text def-14 footer-04__info content_box"><p>Unicorn Platform is an easy-to-use website builder for busy founders.<br />
+<br />
+We are a part of the <a href="https://www.marsx.dev/?ref=unicorn" target="_blank">MarsX</a> dev community.<br /><br />
+Led by → <a href="https://twitter.com/johnrushx" target="_blank">@johnrushx</a><br />
+<!--
+<a style="margin-bottom: -5px;display:block;width: 100%;" href="https://web.archive.org/web/20210305043426/https://www.producthunt.com/posts/unicorn-platform-v2-0?utm_source=badge-top-post-badge&amp;utm_medium=badge&amp;utm_souce=badge-unicorn-platform-v2-0" target="_blank"><img style=";display:block;width: 100%;" src="https://web.archive.org/web/20210305043426im_/https://api.producthunt.com/widgets/embed-image/v1/top-post-badge.svg?post_id=173538&amp;theme=dark&amp;period=daily" alt="Unicorn Platform v2.0 - Simple landing page builder for startups 🦄 | Product Hunt Embed"></a>
+<a style=";display:block;width: 100%;" href="https://web.archive.org/web/20210305043426/https://www.producthunt.com/posts/unicorn-platform?utm_source=badge-top-post-badge&amp;utm_medium=badge&amp;utm_souce=badge-unicorn-platform" target="_blank"><img style=";display:block;width: 100%;" src="https://web.archive.org/web/20210305043426im_/https://api.producthunt.com/widgets/embed-image/v1/top-post-badge.svg?post_id=135925&amp;theme=dark&amp;period=weekly" alt="Unicorn Platform 🦄 - Modern landing page generator for startups | Product Hunt Embed"></a> 
+--></p>
+</div>
+		
+	</div>
+
+
+                            
+                            
+                                
+                                    <div class="footer-04__col">
+                                        <h3 class="def-18_72 title-text--inner footer-04__title">Product</h3>
+                                        <ul class="footer-04__list">
+                                            
+                                                
+                                                    <li class="footer-04__item">
+                                                        <a
+                                                                href="https://app.unicornplatform.com/auth/join"
+                                                                target="_blank"
+                                                                class="content-text def-14 footer-04__link">
+                                                            Website Builder
+                                                        </a>
+                                                    </li>
+                                                
+                                            
+                                                
+                                                    <li class="footer-04__item">
+                                                        <a
+                                                                href="/showcase/"
+                                                                target="_blank"
+                                                                class="content-text def-14 footer-04__link">
+                                                            Showcase
+                                                        </a>
+                                                    </li>
+                                                
+                                            
+                                                
+                                                    <li class="footer-04__item">
+                                                        <a
+                                                                href="https://www.notion.so/product-changelog-568b4245b18542dd95a95370c0623ba9"
+                                                                target="_blank"
+                                                                class="content-text def-14 footer-04__link">
+                                                            Changelog
+                                                        </a>
+                                                    </li>
+                                                
+                                            
+                                                
+                                            
+                                                
+                                            
+                                                
+                                            
+                                                
+                                            
+                                                
+                                            
+                                                
+                                            
+                                                
+                                                    <li class="footer-04__item">
+                                                        <a
+                                                                href="/pricing/"
+                                                                target="_self"
+                                                                class="content-text def-14 footer-04__link">
+                                                            Pricing
+                                                        </a>
+                                                    </li>
+                                                
+                                            
+                                                
+                                                    <li class="footer-04__item">
+                                                        <a
+                                                                href="https://status.unicornplatform.com/"
+                                                                target="_blank"
+                                                                class="content-text def-14 footer-04__link">
+                                                            Status
+                                                        </a>
+                                                    </li>
+                                                
+                                            
+                                                
+                                            
+                                                
+                                            
+                                                
+                                            
+                                                
+                                            
+                                                
+                                            
+                                                
+                                            
+                                                
+                                            
+                                                
+                                            
+                                                
+                                            
+                                                
+                                            
+                                                
+                                            
+                                                
+                                            
+                                                
+                                            
+                                                
+                                            
+                                                
+                                            
+                                                
+                                            
+                                                
+                                            
+                                                
+                                            
+                                                
+                                            
+                                                
+                                            
+                                                
+                                            
+                                                
+                                            
+                                                
+                                            
+                                                
+                                            
+                                                
+                                            
+                                                
+                                            
+                                                
+                                            
+                                                
+                                            
+                                                
+                                            
+                                                
+                                            
+                                                
+                                            
+                                        </ul>
+                                    </div>
+                                
+                            
+                                
+                                    <div class="footer-04__col">
+                                        <h3 class="def-18_72 title-text--inner footer-04__title">Company</h3>
+                                        <ul class="footer-04__list">
+                                            
+                                                
+                                            
+                                                
+                                            
+                                                
+                                            
+                                                
+                                                    <li class="footer-04__item">
+                                                        <a
+                                                                href="/blog/"
+                                                                target="_blank"
+                                                                class="content-text def-14 footer-04__link">
+                                                            Blog
+                                                        </a>
+                                                    </li>
+                                                
+                                            
+                                                
+                                                    <li class="footer-04__item">
+                                                        <a
+                                                                href="https://discord.gg/vyMPSBEzhM"
+                                                                target="_blank"
+                                                                class="content-text def-14 footer-04__link">
+                                                            Join on Discord
+                                                        </a>
+                                                    </li>
+                                                
+                                            
+                                                
+                                                    <li class="footer-04__item">
+                                                        <a
+                                                                href="/white-label/"
+                                                                target="_blank"
+                                                                class="content-text def-14 footer-04__link">
+                                                            White Label
+                                                        </a>
+                                                    </li>
+                                                
+                                            
+                                                
+                                                    <li class="footer-04__item">
+                                                        <a
+                                                                href="https://drive.google.com/drive/u/2/folders/13TfS2QV-VHg5Snw6rVbgmoVVRXTeiDHA?usp=drive_open"
+                                                                target="_blank"
+                                                                class="content-text def-14 footer-04__link">
+                                                            Media Kit
+                                                        </a>
+                                                    </li>
+                                                
+                                            
+                                                
+                                                    <li class="footer-04__item">
+                                                        <a
+                                                                href="mailto:support@unicornplatform.com"
+                                                                target="_blank"
+                                                                class="content-text def-14 footer-04__link">
+                                                            Email Us
+                                                        </a>
+                                                    </li>
+                                                
+                                            
+                                                
+                                                    <li class="footer-04__item">
+                                                        <a
+                                                                href="/earn/"
+                                                                target="_blank"
+                                                                class="content-text def-14 footer-04__link">
+                                                             Affiliate Program
+                                                        </a>
+                                                    </li>
+                                                
+                                            
+                                                
+                                            
+                                                
+                                            
+                                                
+                                            
+                                                
+                                            
+                                                
+                                            
+                                                
+                                            
+                                                
+                                            
+                                                
+                                            
+                                                
+                                            
+                                                
+                                            
+                                                
+                                                    <li class="footer-04__item">
+                                                        <a
+                                                                href="https://help.unicornplatform.com/"
+                                                                target="_blank"
+                                                                class="content-text def-14 footer-04__link">
+                                                            Help Center
+                                                        </a>
+                                                    </li>
+                                                
+                                            
+                                                
+                                            
+                                                
+                                            
+                                                
+                                            
+                                                
+                                            
+                                                
+                                            
+                                                
+                                            
+                                                
+                                            
+                                                
+                                            
+                                                
+                                            
+                                                
+                                            
+                                                
+                                            
+                                                
+                                            
+                                                
+                                            
+                                                
+                                            
+                                                
+                                            
+                                                
+                                            
+                                                
+                                            
+                                                
+                                            
+                                                
+                                            
+                                                
+                                            
+                                                
+                                            
+                                                
+                                            
+                                        </ul>
+                                    </div>
+                                
+                            
+                                
+                                    <div class="footer-04__col">
+                                        <h3 class="def-18_72 title-text--inner footer-04__title">Resources</h3>
+                                        <ul class="footer-04__list">
+                                            
+                                                
+                                            
+                                                
+                                            
+                                                
+                                            
+                                                
+                                            
+                                                
+                                            
+                                                
+                                            
+                                                
+                                            
+                                                
+                                            
+                                                
+                                            
+                                                
+                                            
+                                                
+                                            
+                                                
+                                            
+                                                
+                                                    <li class="footer-04__item">
+                                                        <a
+                                                                href="/wix-alternative/"
+                                                                target="_blank"
+                                                                class="content-text def-14 footer-04__link">
+                                                            Compare with Wix
+                                                        </a>
+                                                    </li>
+                                                
+                                            
+                                                
+                                                    <li class="footer-04__item">
+                                                        <a
+                                                                href="/webflow-alternative/"
+                                                                target="_blank"
+                                                                class="content-text def-14 footer-04__link">
+                                                            Compare with Webflow
+                                                        </a>
+                                                    </li>
+                                                
+                                            
+                                                
+                                                    <li class="footer-04__item">
+                                                        <a
+                                                                href="/wordpress-alternative/"
+                                                                target="_blank"
+                                                                class="content-text def-14 footer-04__link">
+                                                            Compare with WordPress
+                                                        </a>
+                                                    </li>
+                                                
+                                            
+                                                
+                                                    <li class="footer-04__item">
+                                                        <a
+                                                                href="/unbounce-alternative/"
+                                                                target="_blank"
+                                                                class="content-text def-14 footer-04__link">
+                                                            Compare with Unbounce
+                                                        </a>
+                                                    </li>
+                                                
+                                            
+                                                
+                                                    <li class="footer-04__item">
+                                                        <a
+                                                                href="/landing-page-for-mobile-app/"
+                                                                target="_blank"
+                                                                class="content-text def-14 footer-04__link">
+                                                            Website For Mobile Apps
+                                                        </a>
+                                                    </li>
+                                                
+                                            
+                                                
+                                                    <li class="footer-04__item">
+                                                        <a
+                                                                href="/landing-page-for-saas/"
+                                                                target="_blank"
+                                                                class="content-text def-14 footer-04__link">
+                                                            Website For SaaS
+                                                        </a>
+                                                    </li>
+                                                
+                                            
+                                                
+                                                    <li class="footer-04__item">
+                                                        <a
+                                                                href="/make-website-for-nft/"
+                                                                target="_blank"
+                                                                class="content-text def-14 footer-04__link">
+                                                            Website For NFT
+                                                        </a>
+                                                    </li>
+                                                
+                                            
+                                                
+                                            
+                                                
+                                                    <li class="footer-04__item">
+                                                        <a
+                                                                href="/blog/build-your-website-in-minutes-with-chat-gpt/"
+                                                                target="_blank"
+                                                                class="content-text def-14 footer-04__link">
+                                                            Chat GPT website builder
+                                                        </a>
+                                                    </li>
+                                                
+                                            
+                                                
+                                            
+                                                
+                                            
+                                                
+                                            
+                                                
+                                            
+                                                
+                                            
+                                                
+                                            
+                                                
+                                            
+                                                
+                                            
+                                                
+                                            
+                                                
+                                            
+                                                
+                                                    <li class="footer-04__item">
+                                                        <a
+                                                                href="/blog/fun-and-interactive-ai-websites-that-will-blow-your-mind/"
+                                                                target="_blank"
+                                                                class="content-text def-14 footer-04__link">
+                                                            Interactive ai
+                                                        </a>
+                                                    </li>
+                                                
+                                            
+                                                
+                                                    <li class="footer-04__item">
+                                                        <a
+                                                                href="/blog/free-ai-website-builder-create-stunning-landing-pages-with-unicorn-platform/"
+                                                                target="_blank"
+                                                                class="content-text def-14 footer-04__link">
+                                                            Free AI landing page generator
+                                                        </a>
+                                                    </li>
+                                                
+                                            
+                                                
+                                                    <li class="footer-04__item">
+                                                        <a
+                                                                href="/roast-my-website/"
+                                                                target="_blank"
+                                                                class="content-text def-14 footer-04__link">
+                                                            Roast your website
+                                                        </a>
+                                                    </li>
+                                                
+                                            
+                                                
+                                            
+                                                
+                                            
+                                                
+                                            
+                                                
+                                            
+                                                
+                                            
+                                                
+                                            
+                                                
+                                            
+                                                
+                                            
+                                        </ul>
+                                    </div>
+                                
+                            
+                                
+                                    <div class="footer-04__col">
+                                        <h3 class="def-18_72 title-text--inner footer-04__title">Mars Verse</h3>
+                                        <ul class="footer-04__list">
+                                            
+                                                
+                                            
+                                                
+                                            
+                                                
+                                            
+                                                
+                                            
+                                                
+                                            
+                                                
+                                            
+                                                
+                                            
+                                                
+                                            
+                                                
+                                            
+                                                
+                                            
+                                                
+                                            
+                                                
+                                            
+                                                
+                                            
+                                                
+                                            
+                                                
+                                            
+                                                
+                                            
+                                                
+                                            
+                                                
+                                            
+                                                
+                                            
+                                                
+                                            
+                                                
+                                            
+                                                
+                                            
+                                                
+                                                    <li class="footer-04__item">
+                                                        <a
+                                                                href="https://johnrush.me/?ref=unicornplatform"
+                                                                target="_blank"
+                                                                class="content-text def-14 footer-04__link">
+                                                            John Rush
+                                                        </a>
+                                                    </li>
+                                                
+                                            
+                                                
+                                                    <li class="footer-04__item">
+                                                        <a
+                                                                href="https://marsx.dev/?ref=unicornplatform"
+                                                                target="_blank"
+                                                                class="content-text def-14 footer-04__link">
+                                                            MarsX
+                                                        </a>
+                                                    </li>
+                                                
+                                            
+                                                
+                                                    <li class="footer-04__item">
+                                                        <a
+                                                                href="https://devhunt.org/?ref=unicornplatform"
+                                                                target="_blank"
+                                                                class="content-text def-14 footer-04__link">
+                                                            DevHunt (Weekly Best Dev Tools)
+                                                        </a>
+                                                    </li>
+                                                
+                                            
+                                                
+                                                    <li class="footer-04__item">
+                                                        <a
+                                                                href="https://seobotai.com/?ref=unicornplatform"
+                                                                target="_blank"
+                                                                class="content-text def-14 footer-04__link">
+                                                            SeoBOT (Automate Entire SEO)
+                                                        </a>
+                                                    </li>
+                                                
+                                            
+                                                
+                                                    <li class="footer-04__item">
+                                                        <a
+                                                                href="https://marketsy.ai/?ref=unicornplatform"
+                                                                target="_blank"
+                                                                class="content-text def-14 footer-04__link">
+                                                            Marketsy AI (Sell Digital Products)
+                                                        </a>
+                                                    </li>
+                                                
+                                            
+                                                
+                                                    <li class="footer-04__item">
+                                                        <a
+                                                                href="https://floatui.com/?ref=unicornplatform"
+                                                                target="_blank"
+                                                                class="content-text def-14 footer-04__link">
+                                                            Float UI (AI Tailwind UI Kit)
+                                                        </a>
+                                                    </li>
+                                                
+                                            
+                                                
+                                                    <li class="footer-04__item">
+                                                        <a
+                                                                href="https://www.fleexy.dev/?ref=unicornplatform"
+                                                                target="_blank"
+                                                                class="content-text def-14 footer-04__link">
+                                                            Fleexy (Microapps Builder)
+                                                        </a>
+                                                    </li>
+                                                
+                                            
+                                                
+                                                    <li class="footer-04__item">
+                                                        <a
+                                                                href="https://uigenerator.org/?ref=unicornplatform"
+                                                                target="_blank"
+                                                                class="content-text def-14 footer-04__link">
+                                                            UI generator [freebie]
+                                                        </a>
+                                                    </li>
+                                                
+                                            
+                                                
+                                                    <li class="footer-04__item">
+                                                        <a
+                                                                href="https://listingbott.com/?ref=unicornplatform"
+                                                                target="_blank"
+                                                                class="content-text def-14 footer-04__link">
+                                                            Submit website to directories
+                                                        </a>
+                                                    </li>
+                                                
+                                            
+                                                
+                                            
+                                                
+                                            
+                                                
+                                            
+                                                
+                                                    <li class="footer-04__item">
+                                                        <a
+                                                                href="https://allgpts.co/?ref=unicornplatform"
+                                                                target="_blank"
+                                                                class="content-text def-14 footer-04__link">
+                                                            allGPTs (Directory of GPTs)
+                                                        </a>
+                                                    </li>
+                                                
+                                            
+                                                
+                                                    <li class="footer-04__item">
+                                                        <a
+                                                                href="https://indexrusher.com/?ref=unicornplatform"
+                                                                target="_blank"
+                                                                class="content-text def-14 footer-04__link">
+                                                            IndexRusher (fast site indexing)
+                                                        </a>
+                                                    </li>
+                                                
+                                            
+                                                
+                                                    <li class="footer-04__item">
+                                                        <a
+                                                                href="https://rapidforms.co/?ref=unicornplatform"
+                                                                target="_blank"
+                                                                class="content-text def-14 footer-04__link">
+                                                            RapidForms (online form builder)
+                                                        </a>
+                                                    </li>
+                                                
+                                            
+                                                
+                                                    <li class="footer-04__item">
+                                                        <a
+                                                                href="https://www.inboxbott.com/"
+                                                                target="_blank"
+                                                                class="content-text def-14 footer-04__link">
+                                                            InboxBott (unify all your channels)
+                                                        </a>
+                                                    </li>
+                                                
+                                            
+                                                
+                                                    <li class="footer-04__item">
+                                                        <a
+                                                                href="https://saasemailer.com/?ref=unicornplatform"
+                                                                target="_blank"
+                                                                class="content-text def-14 footer-04__link">
+                                                            SaaS Emailer
+                                                        </a>
+                                                    </li>
+                                                
+                                            
+                                                
+                                                    <li class="footer-04__item">
+                                                        <a
+                                                                href="https://wrapifai.com/?ref=unicornplatform"
+                                                                target="_blank"
+                                                                class="content-text def-14 footer-04__link">
+                                                            Wrapifai
+                                                        </a>
+                                                    </li>
+                                                
+                                            
+                                                
+                                            
+                                                
+                                            
+                                        </ul>
+                                    </div>
+                                
+                            
+                            
+                                <div class="footer-04__col">
+                                    
+                                        <h3 class="def-18_72 title-text--inner footer-04__title">Say 'hi'</h3>
+                                    
+                                    <div class="footer-04__social_box">
+                                        
+	
+	<div class="social-buttons  social-buttons--left ">
+		<ul class="social-buttons__list">
+		<li class="social-buttons__item"><a
+								class="social-buttons__link social-buttons__link--twitter"
+								href="https://twitter.com/unicornplatform" target="_blank"><img
+                                loading="lazy"
+								class="social-buttons__icon"
+                                alt="twitter icon"
+								src="https://cdn.unicornplatform.com/static/img/icons/social/color/x.svg"/></a></li><li class="social-buttons__item"><a
+								class="social-buttons__link social-buttons__link--fb"
+								href="https://fb.com/unicornplatform" target="_blank"><img
+                                loading="lazy"
+								class="social-buttons__icon"
+                                alt="fb icon"
+								src="https://cdn.unicornplatform.com/static/img/icons/social/color/facebook-only-letter.svg"/></a></li><li class="social-buttons__item"><a
+								class="social-buttons__link social-buttons__link--instagram"
+								href="https://www.instagram.com/unicornplatform/" target="_blank"><img
+                                loading="lazy"
+								class="social-buttons__icon"
+                                alt="instagram icon"
+								src="https://cdn.unicornplatform.com/static/img/icons/social/color/instagram.svg"/></a></li><li class="social-buttons__item"><a
+								class="social-buttons__link social-buttons__link--producthunt"
+								href="https://www.producthunt.com/products/unicorn-platform" target="_blank"><img
+                                loading="lazy"
+								class="social-buttons__icon"
+                                alt="producthunt icon"
+								src="https://cdn.unicornplatform.com/static/img/icons/social/color/product-hunt.svg"/></a></li><li class="social-buttons__item"><a
+								class="social-buttons__link social-buttons__link--indiehackers"
+								href="https://www.indiehackers.com/product/unicorn-platform" target="_blank"><img
+                                loading="lazy"
+								class="social-buttons__icon"
+                                alt="indiehackers icon"
+								src="https://cdn.unicornplatform.com/static/img/icons/social/color/ih.svg"/></a></li>
+		</ul>
+	</div>
+
+                                    </div>
+                                </div>
+                            
+                        </div>
+                    </div>
+                    
+                        
+                            
+	
+	<div class="footer-04__bottom">
+		<div class="container">
+			<div class="footer-04__bottom_wrapper ">
+				
+					
+	
+<div class="buttons-set"><ul class="buttons-set__list"><li class="buttons-set__item"><a
+				 data-stripe-product-id="" data-stripe-mode="" data-successful-payment-url="" data-cancel-payment-url=""
+
+				 class="button button--white-outline " href="https://app.unicornplatform.com/auth/join?ref=htmlrev" target="_self"   onclick="posthog.capture(&quot;click_signup_landing&quot;, {button_location:&quot;footer&quot;});"   ><span class="button__text">Create free website</span></a></li></ul></div>
+
+				
+				<ul class="footer-04__bottom_links  text-white ">
+					
+            
+              <li class="footer-04__bottom_links_item">
+                <a target="_blank" href="/privacy-policy/" class="content-text def-12 footer-04__bottom_link footer-04__bottom_item">
+                  Privacy Policy
+                </a>
+              </li>
+            
+					
+            
+              <li class="footer-04__bottom_links_item">
+                <a target="_blank" href="/terms-of-service/" class="content-text def-12 footer-04__bottom_link footer-04__bottom_item">
+                  Terms of Service
+                </a>
+              </li>
+            
+					
+            
+					
+				</ul>
+			</div>
+		</div>
+	</div>
+
+
+                        
+                    
+                    
+                </div>
+            </footer>
+        </div>
+	
+  
+    <style>
+      #footer .button {
+    border-radius: 16px;
+    padding: 16px 24px 16px;
+    min-height: 48px;
+    box-shadow: none;
+}
+
+#footer .button:hover {
+    background-color: white;
+    color: #201C2F;
+}
+
+#footer .button--empty {
+    padding: 16px 20px 16px;
+    color: #201C2F;
+}
+
+#footer .button--empty:hover {
+    padding: 16px 20px 16px;
+    color: #943BDC;
+}
+
+#footer .button__text {
+    font-size: 16px;
+}
+
+#footer .container {
+    padding: 0 32px;
+    max-width: 2560px;
+}
+
+#footer .footer-04__col:first-child {
+    padding-right: 88px;
+}
+
+@media (max-width: 1300px) {
+#footer .container {
+    padding: 0 15px;
+    }
+}
+
+#footer .footer-04__top_wrapper {
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-bottom: 20px;
+}
+
+#footer .footer-04__bottom_wrapper {
+    padding: 34px 0 48px;
+    
+}
+
+#footer .footer-04__title {
+    font-size: 24px;
+}
+
+#footer .footer-04__link {
+    font-size: 16px;
+}
+
+#footer .footer-04__info {
+    font-size: 16px;
+}
+
+#footer .footer-04__col:not(:first-child) {
+    width: 18%;
+    min-width: 160px;
+}
+
+#footer .footer-04__logo {
+    margin-bottom: 16px;
+}
+
+#footer .social-buttons__link {
+    filter: brightness(0) invert(1);
+}
+
+@media (max-width: 768px) {
+   #footer .footer-04__col {
+    width: 100%;
+    min-width: 200px;
+}
+
+#footer .footer-04__col:first-child {
+    padding-right: 0;
+}
+
+#footer .footer-04__col:not(:first-child) {
+    width: 100%;
+}
+
+}
+    </style>
+  
+  
+
+
+
+
+	<a class="by-unicorn-platform" href="https://unicornplatform.com/?ref=user_website" target="_blank" title="This page was made in Unicorn Platform">
+  <div class="by-unicorn-platform__box">
+    <span class="by-unicorn-platform__left-text">Built on</span>
+    <span class="by-unicorn-platform__right-text">
+      <b class="by-unicorn-platform__text">Unicorn Platform</b>
+      <img loading="lazy" class="by-unicorn-platform__logo" src="https://cdn.unicornplatform.com/static/img/logos/unicorn-platform-logo.svg" height="12" width="12" alt="Unicorn Platform logo">
+    </span>
+  </div>
+</a>
+
+
+
+	<div class="popup-component__mask js-close-custom-popup-button js-custom-popup-mask"></div>
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+	<div class="pswp__bg"></div>
+	<div class="pswp__scroll-wrap">
+		<div class="pswp__container">
+			<div class="pswp__item"></div>
+			<div class="pswp__item"></div>
+			<div class="pswp__item"></div>
+		</div>
+		<div class="pswp__ui pswp__ui--hidden">
+			<div class="pswp__top-bar">
+				<div class="pswp__counter"></div>
+				<button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+				<button class="pswp__button pswp__button--share" title="Share"></button>
+				<button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+				<button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+				<div class="pswp__preloader">
+					<div class="pswp__preloader__icn">
+						<div class="pswp__preloader__cut">
+							<div class="pswp__preloader__donut"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+				<div class="pswp__share-tooltip"></div>
+			</div>
+			<button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button>
+			<button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button>
+			<div class="pswp__caption">
+				<div class="pswp__caption__center"></div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<style>
+			.custom-colors-enabled .fill-main{
+				fill: #943BDC
+			}
+
+			.custom-colors-enabled .button--accent-outline .icon svg *,
+			.button--accent-outline .icon svg .custom-colors-enabled *,
+			.custom-colors-enabled .button--accent-outline .button__system_icon svg *,
+			.button--accent-outline .button__system_icon svg .custom-colors-enabled * {
+				fill: #6624BD
+			}
+
+			.custom-colors-enabled .stroke-main {
+				stroke: #943BDC
+			}
+
+			.custom-colors-enabled .comps .button--accent-outline,
+			.comps .custom-colors-enabled .button--accent-outline,
+			 .custom-colors-enabled .store-button--white:hover{
+				border-color: #6624BD
+			}
+			.custom-colors-enabled .border-main,
+			.custom-colors-enabled .text-input:focus,
+      .custom-colors-enabled .form__input .chosen-container.chosen-container-active .chosen-choices,
+			.custom-colors-enabled .textarea:focus,
+			.custom-colors-enabled .select:focus,
+			.custom-colors-enabled .pricing-02__card_box--accent,
+			.custom-colors-enabled .pricing-03__hover,
+			.custom-colors-enabled .pricing-04__card--accent,
+			.custom-colors-enabled .pricing-04__hover,
+			.custom-colors-enabled .pricing-05__hover,
+			.custom-colors-enabled .bg-medium-color .cta_form-04__wrapper,
+			.bg-medium-color .custom-colors-enabled .cta_form-04__wrapper,
+			.custom-colors-enabled .bg-light-color .cta_form-04__wrapper,
+			.bg-light-color .custom-colors-enabled .cta_form-04__wrapper,
+			.custom-colors-enabled .bg-medium-color .cta_form-04__bottom,
+			.bg-medium-color .custom-colors-enabled .cta_form-04__bottom,
+			.custom-colors-enabled .bg-light-color .cta_form-04__bottom,
+			.bg-light-color .custom-colors-enabled .cta_form-04__bottom,
+			.custom-colors-enabled .bg-medium-color .cta_button-16__wrapper,
+			.bg-medium-color .custom-colors-enabled .cta_button-16__wrapper,
+			.custom-colors-enabled .bg-light-color .cta_button-16__wrapper,
+			.bg-light-color .custom-colors-enabled .cta_button-16__wrapper,
+			.custom-colors-enabled .bg-medium-color .links-02__list,
+			.bg-medium-color .custom-colors-enabled .links-02__list,
+			.custom-colors-enabled .bg-light-color .links-02__list,
+			.bg-light-color .custom-colors-enabled .links-02__list,
+			.custom-colors-enabled .faq-01__question:hover,
+			.custom-colors-enabled .faq-03__question:hover,
+			.custom-colors-enabled .features-09__item--new,
+			.custom-colors-enabled .bg-medium-color .steps-01__number,
+			.bg-medium-color .custom-colors-enabled .steps-01__number,
+			.custom-colors-enabled .bg-light-color .steps-01__number,
+			.bg-light-color .custom-colors-enabled .steps-01__number {
+				border-color: #943BDC
+			}
+
+
+
+			.custom-colors-enabled .comps .button--accent-outline,
+			.comps .custom-colors-enabled .button--accent-outline{
+				color: #6624BD
+			}
+			.custom-colors-enabled .color-main,
+			.custom-colors-enabled .link,
+			.custom-colors-enabled .feature__link,
+			.custom-colors-enabled .testimonials-03__person_link,
+			.custom-colors-enabled .footer-01__link,
+			.custom-colors-enabled .faq-05__link,
+			.custom-colors-enabled .features-16__link,
+			.custom-colors-enabled .subheading,
+			.custom-colors-enabled .content_box a,
+			.content_box .custom-colors-enabled a,
+			.custom-colors-enabled .tab__button.state-active-tab,
+			.custom-colors-enabled .tab__button--active:focus,
+			.custom-colors-enabled .score__value,
+			.custom-colors-enabled .form__message_opener_box,
+			.custom-colors-enabled .message__bubble_link,
+			.custom-colors-enabled .team-05__person_name,
+			.custom-colors-enabled .tabs-04__button.state-active-tab,
+			.custom-colors-enabled .tabs-04__button--active:focus,
+			.custom-colors-enabled .pricing-02__hover,
+			.custom-colors-enabled .pricing-03__hover,
+			.custom-colors-enabled .pricing-04__hover,
+			.custom-colors-enabled .pricing-05__hover,
+			.custom-colors-enabled .cta_button-25__subheading,
+			.custom-colors-enabled .cta_button-31__heading,
+			.custom-colors-enabled .footer-03__pages_link:hover,
+			.custom-colors-enabled .code-02__info_prefix,
+			.custom-colors-enabled .features-17__item .feature__title_text,
+			.features-17__item .custom-colors-enabled .feature__title_text {
+				color: #943BDC
+			}
+
+			.custom-colors-enabled .color-main-hover:hover,
+			.custom-colors-enabled .link:hover,
+			.custom-colors-enabled .feature__link:hover,
+			.custom-colors-enabled .testimonials-03__person_link:hover,
+			.custom-colors-enabled .footer-01__link:hover,
+			.custom-colors-enabled .faq-05__link:hover,
+			.custom-colors-enabled .features-16__link:hover, .custom-colors-enabled .message__bubble_link:hover {
+				color: #5b20a9
+			}
+
+			.custom-colors-enabled .comps .button--accent-bg,
+			.comps .custom-colors-enabled .button--accent-bg,
+			.custom-colors-enabled .store-button:hover,
+			.custom-colors-enabled .circle-button--accent-bg,
+			.custom-colors-enabled .circle-button--accent-bg .circle-button__hover_bg,
+			.circle-button--accent-bg .custom-colors-enabled .circle-button__hover_bg,
+			.custom-colors-enabled .circle-button--light-bg:hover,
+			.custom-colors-enabled .slick-dots li.slick-active button,
+			.slick-dots li.slick-active .custom-colors-enabled button{
+				background-color: #6624BD
+			}
+			.custom-colors-enabled .bg-main,
+			.custom-colors-enabled .radio__check:before,
+			.custom-colors-enabled .checkbox__check:before,
+			.custom-colors-enabled .social-buttons__link--circle,
+			.custom-colors-enabled .roadmap-01__column,
+			.custom-colors-enabled .cta_button-25__item::before,
+			.custom-colors-enabled .testimonials-05__blue_box::before,
+			.custom-colors-enabled .footer-03__pages_item:after,
+			.custom-colors-enabled .features-02__number:before,
+			.custom-colors-enabled .features-09__item--new .tag,
+			.features-09__item--new .custom-colors-enabled .tag,
+			.custom-colors-enabled .features-15__item::before,
+			.custom-colors-enabled .bg-medium-color .steps-01__list:before,
+			.bg-medium-color .custom-colors-enabled .steps-01__list:before,
+			.custom-colors-enabled .bg-light-color .steps-01__list:before,
+			.bg-light-color .custom-colors-enabled .steps-01__list:before,
+            .comps.custom-colors-enabled .bg-accent-color .footer-02,
+            .comps.custom-colors-enabled .bg-accent-color .footer-04{
+				background-color: #943BDC
+			}
+
+			.custom-colors-enabled .bg-main-hover:hover,
+			.custom-colors-enabled .comps .button--accent-bg:hover,
+			.comps .custom-colors-enabled .button--accent-bg:hover,
+			.custom-colors-enabled .checkbox__input:checked:hover ~ .checkbox__check:hover:before {
+				background-color: #5b20a9
+			}
+
+			.custom-colors-enabled .border-alt,
+			.custom-colors-enabled .comps .button--alt-accent-outline,
+			.comps .custom-colors-enabled .button--alt-accent-outline,
+			.custom-colors-enabled .bg-accent-color .pricing-02__card_box--accent,
+			.bg-accent-color .custom-colors-enabled .pricing-02__card_box--accent,
+			.custom-colors-enabled .bg-accent-color .pricing-04__card--accent,
+			.bg-accent-color .custom-colors-enabled .pricing-04__card--accent {
+				border-color: #6624BD
+			}
+
+			.custom-colors-enabled .color-alt,
+			.custom-colors-enabled .comps .button--alt-accent-outline,
+			.comps .custom-colors-enabled .button--alt-accent-outline {
+				color: #6624BD
+			}
+
+			.custom-colors-enabled .bg-alt,
+			.custom-colors-enabled .comps .button--alt-accent-bg,
+			.comps .custom-colors-enabled .button--alt-accent-bg,
+			.custom-colors-enabled .bg-accent-color .slick-dots li.slick-active button,
+			.bg-accent-color .slick-dots li.slick-active .custom-colors-enabled button {
+				background-color: #6624BD
+			}
+
+			.custom-colors-enabled .bg-alt-hover:hover,
+			.custom-colors-enabled .comps .button--alt-accent-bg:hover,
+			.comps .custom-colors-enabled .button--alt-accent-bg:hover {
+				background-color: #5b20a9
+			}
+
+			.custom-colors-enabled .fill-alt .icon svg *,
+			.custom-colors-enabled .comps .button--alt-accent-outline .icon svg *,
+			.comps .custom-colors-enabled .button--alt-accent-outline .icon svg *,
+			.custom-colors-enabled .fill-alt .button__system_icon svg *,
+			.custom-colors-enabled .comps .button--alt-accent-outline .button__system_icon svg *,
+			.comps .custom-colors-enabled .button--alt-accent-outline .button__system_icon svg * {
+				fill: #6624BD
+			}
+
+			.custom-colors-enabled .fill-alt-hover:hover .icon svg *,
+			.custom-colors-enabled .feature__link:hover .icon svg *,
+			.custom-colors-enabled .fill-alt-hover:hover .button__system_icon svg *,
+			.custom-colors-enabled .feature__link:hover .button__system_icon svg * {
+				fill: #6624BD
+			}
+
+
+			.custom-colors-enabled .bg-accent-color .page-component__bg_overlay_box:not(.page-component__bg_overlay_box--always-white),
+			.custom-colors-enabled .bg-accent-color .background-color-picker__circle,
+			.custom-colors-enabled .bg-accent-color .text--01__box {
+				background-color: #943BDC
+			}
+      .custom-colors-enabled {
+        --primary: #6624BD;
+        --primary-dark: #5b20a9;
+        --accent: #943BDC;
+        --secondary: #6624BD;
+        --secondary-dark: #5b20a9;
+      }
+		</style>
+
+<style>
+        html {
+          --card-shadow-1-none: none;
+          --card-shadow-1-small: 0 6px 22px 0 rgba(0,0,0,0.1);
+          --card-shadow-1-default: 0 12px 44px 0 rgba(0,0,0,0.1);
+          --card-shadow-1-large: 0 24px 88px 0 rgba(0,0,0,0.1);
+          --card-shadow-1-borderThin: 0 0 0 1px #EEEEEE;
+          --card-shadow-1-borderThick: 0 0 0 2px #EEEEEE;
+
+
+          --card-shadow-2-none: none;
+          --card-shadow-2-small: 0 2.5px 7.5px 0 rgba(37,44,97,0.15);
+          --card-shadow-2-default: 0 5px 15px 0 rgba(37,44,97,0.15);
+          --card-shadow-2-large: 0 10px 30px 0 rgba(37,44,97,0.15);
+          --card-shadow-2-borderThin: 0 0 0 1px #EEEEEE;
+          --card-shadow-2-borderThick: 0 0 0 2px #EEEEEE;
+
+
+          --card-shadow-3-none: none;
+          --card-shadow-3-small: 0 1px 2px 0 rgba(136,144,195,0.2);
+          --card-shadow-3-default: 0 2px 4px 0 rgba(136,144,195,0.2);
+          --card-shadow-3-large: 0 4px 8px 0 rgba(136,144,195,0.2);
+          --card-shadow-3-borderThin: 0 0 0 1px #EEEEEE;
+          --card-shadow-3-borderThick: 0 0 0 2px #EEEEEE;
+
+          --card-shadow-4-none: none;
+          --card-shadow-4-small: 0 1px 2px 0 rgba(136,144,195,0.2), 0 2.5px 7.5px 0 rgba(37,44,97,0.15);
+          --card-shadow-4-default: 0 2px 4px 0 rgba(136,144,195,0.2), 0 5px 15px 0 rgba(37,44,97,0.15);
+          --card-shadow-4-large: 0 4px 8px 0 rgba(136,144,195,0.2), 0 10px 30px 0 rgba(37,44,97,0.15);
+          --card-shadow-4-borderThin: 0 0 0 1px #EEEEEE;
+          --card-shadow-4-borderThick: 0 0 0 2px #EEEEEE;
+
+          --card-shadow-hover-none: none;
+          --card-shadow-hover-default: 0 2px 8px 0 rgba(136,144,195,0.22),0 8px 15px 0 rgba(37,44,97,0.17);
+          --card-shadow-hover-small: 0 1px 4px 0 rgba(136,144,195,0.22), 0 4px 7.5px 0 rgba(37,44,97,0.17);
+          --card-shadow-hover-large: 0 4px 16px 0 rgba(136,144,195,0.22), 0 16px 30px 0 rgba(37,44,97,0.17);
+          --card-shadow-hover-borderThin: 0 0 0 1px #EEEEEE;
+          --card-shadow-hover-borderThick: 0 0 0 2px #EEEEEE;
+        }
+      </style><style>
+        html {
+          --button-shadow-none: none;
+          --button-shadow-small: 0 1px 2px 0 rgba(136,144,195,0.2),0 2px 5px 0 rgba(37,44,97,0.15);
+          --button-shadow-default: 0 2px 4px 0 rgba(136,144,195,0.2),0 5px 15px 0 rgba(37,44,97,0.15);
+          --button-shadow-large: 0 4px 8px 0 rgba(136,144,195,0.2),0 10px 20px 0 rgba(37,44,97,0.15);
+
+          --button-shadow-hover-none: none;
+          --button-shadow-hover-small: 0 1px 4px 0 rgba(136,144,195,0.22),0 4px 8px 0 rgba(37,44,97,0.17);
+          --button-shadow-hover-default: 0 2px 8px 0 rgba(136,144,195,0.22),0 8px 15px 0 rgba(37,44,97,0.17);
+          --button-shadow-hover-large: 0 4px 16px 0 rgba(136,144,195,0.22),0 16px 30px 0 rgba(37,44,97,0.17);
+        }
+      </style><style>
+          html {
+            --button-radius: 16px;
+          }
+          .comps.live_website .button { 
+            border-radius: var(--button-radius); 
+          }
+        </style><style>
+          .comps.live_website .button {
+            box-shadow: var(--button-shadow-none);
+          }
+          .comps.live_website .button:hover {
+            box-shadow: var(--button-shadow-hover-none);
+          }
+        </style><style>
+          html {
+            --card-radius: 0px;
+          }
+          .comps.live_website .card-container { 
+            border-radius: var(--card-radius);
+          }
+          .comps.live_website .card-container.sc-br-0_5 { 
+            border-radius: calc(var(--card-radius) / 0.5);
+          }
+        </style><style>
+          .comps.live_website .card-container.sh-1 {
+            box-shadow: var(--card-shadow-1-none);
+          }
+          .comps.live_website .card-container.sh-2 {
+            box-shadow: var(--card-shadow-2-none);
+          }
+          .comps.live_website .card-container.sh-3 {
+            box-shadow: var(--card-shadow-3-none);
+          }
+          .comps.live_website .card-container.sh-4, .comps.live_website .bg-white-color .posts-02__item--accent {
+            box-shadow: var(--card-shadow-4-none);
+          }
+          .comps.live_website .card-container.sh-has-hover:hover {
+            box-shadow: var(--card-shadow-hover-none);
+          }
+        </style>
+
+<style>
+	.page-component__bg_image_box .page-component__bg_image_box .page-component__bg_overlay_box {
+        position: relative;
+	}
+	body .page-component__bg_overlay_box {
+		position: absolute;
+	}
+    .footer-02__text.content_box a{
+    	color: inherit !important;
+    }
+    .footer-04__info{
+	    font-size: 14px;
+    }
+</style>
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="545a7057-30ba-42a0-99b6-7c8ba46735d6";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script>
+
+<script>
+    // START OF: console.log greeting =====
+    var greetCoders = (function(){
+        function madeWith(){
+
+            console.log('This website is running on ⤵');
+            console.log('%c Unicorn Platform \n', 'font-weight: bold; font-size: 30px;color: red; text-shadow: 3px 3px 0 rgb(217,31,38) , 6px 6px 0 rgb(226,91,14) , 9px 9px 0 rgb(245,221,8) , 12px 12px 0 rgb(5,148,68) , 15px 15px 0 rgb(2,135,206) , 18px 18px 0 rgb(4,77,145) , 21px 21px 0 rgb(42,21,113); padding-bottom: 15px;padding-top: 15px;');
+            console.log('https://unicornplatform.com/');
+            console.log('We are looking for ReactJS ninjas and Django magicians.');
+            console.log('hi@unicornplatform.com');
+        }
+        return {
+            madeWith: madeWith
+        }
+    }());
+
+    greetCoders.madeWith();
+    // ===== END OF: console.log greeting
+</script>
+
+<script>
+const footerLinks = document.querySelectorAll('.footer-04 a:not(.button)');
+footerLinks.forEach((link) => {
+	let linkText = link.textContent.trim();
+	if (link.classList.contains('footer-04__logo_link')) {
+		linkText = "Unicorn logo"
+	}
+	if (link.classList.contains('social-buttons__link')) {
+		const url = new URL(link.href)
+		linkText = `Social icon: ${url.hostname}`
+	}
+	link.onclick = () => {
+		posthog.capture('click_footer_link_landing', {
+			link_text: linkText,
+			link_url: link.href,
+		})
+	}
+})
+</script>
+
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v833ccba57c9e4d2798f2e76cebdd09a11778172276447" integrity="sha512-57MDmcccJXYtNnH+ZiBwzC4jb2rvgVCEokYN+L/nLlmO8rfYT/gIpW2A569iJ/3b+0UEasghjuZH/ma3wIs/EQ==" data-cf-beacon='{"version":"2024.11.0","token":"b1c6666233b0473381045a48228bce2f","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+</body>
+</html>
