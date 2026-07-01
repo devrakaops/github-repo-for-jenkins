@@ -1,0 +1,16 @@
+echo "Stage-1: Docker Checkout"
+ls -al 
+
+echo "Stage-2: Docker Image Build" 
+docker image build -t micro-web .
+
+echo "Stage-3: Docker Image Tag"
+docker image tag micro-web:latest docker.io/dollyjangid/micro-web:v$BUILD_NUMBER
+
+echo "Stage-4: Push to Docker Registry Server"
+echo "dckr_pat_m6HhWRuvsMerhGT7ZM2YAAxFDQY" | docker login -u dollyjangid --password-stdin
+docker push docker.io/dollyjangid/micro-web:v$BUILD_NUMBER
+
+echo "Stage-5: Container Run"
+docker rm -f $(docker ps -a -q)
+docker container run -d  -p 80:80 docker.io/dollyjangid/micro-web:v$BUILD_NUMBER
